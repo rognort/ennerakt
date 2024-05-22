@@ -1,0 +1,301 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;1,300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400;1,500&display=swap');
+
+u {font-family: 'Booko'; font-size: 100%; text-decoration: none;line-height:0px;letter-spacing: 0px;}
+
+/* TABULKY ŠEDĚ = 
+
+.page table tbody tr:nth-child(odd) {background:	#E5E5E5;} 
+
+*/
+
+.subheader {
+    margin-top: -16pt;
+  }
+
+h1, h2, h3, h4 {color:black !important}
+
+.center{
+    text-align: center;
+    }
+.zdroj::before{
+content: "-";
+}
+.zdroj {
+    text-align: center;
+    margin-top: 0pt;
+    font-size: 90%;
+    width: 70%; /* Adjust the width as needed */
+    display: inline-block;
+    text-align: center;
+  }
+
+.citat {
+  text-align: center;
+  font-style: italic;
+  margin-top: 0pt;
+  font-size: 100%;
+  width: 80%; /* Adjust the width as needed */
+  display: inline-block;
+  text-align: center;
+}
+
+body {font-family: 'Booko'}
+
+body {
+    background-color: lightyellow;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+
+h1, header > p {
+    color: black;
+    text-align: center;
+}
+
+nav {color:black;
+    display: inline;
+    text-align: left;
+    padding: 10px;
+}
+
+nav a {
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+}
+
+footer{
+    text-align: center;
+    color: black;
+    background-color: lightgray;
+}
+
+h1{letter-spacing: 1px}
+h6{text-align: center; letter-spacing: 5px}
+body{text-align:justify}
+
+cap{
+	font-variant:small-caps;}
+  body{font-family: 'Lora'; text-align:justify}
+  
+h1 {
+    display: flex;
+    align-items: center; /* Zarovnání vertikálně */
+    justify-content: center; /* Zarovnání horizontálně */
+    position: relative; /* Nutné pro zarovnání */
+}
+
+h1::after {
+    content: "";
+    background-color: black;
+    width: 90%;
+    height: 1px; 
+    box-shadow: 0px 0px 2px black;
+    position: absolute; /* Nutné pro zarovnání */
+    bottom: 0; /* Zarovnání k dolnímu okraji nadpisu */
+    left: 3%; /* Přizpůsobení zarovnání */
+}
+
+h2 {
+    font-variant: small-caps;
+    align-items:baseline; /* Zarovnání vertikálně */
+    text-align: center; /* Zarovnání horizontálně */
+    font-size: 30pt;
+    margin-bottom: 5pt;
+}
+
+h5 {
+    font-size: 13pt;
+    margin-bottom: -5pt;
+    margin-top: 0pt;
+}
+
+h4{ 
+    font-size: 17pt;
+    margin-bottom: -5pt;
+    margin-top: 15pt;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    padding-top: 20px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10pt;
+}
+
+.sidebar ul li a:hover {
+    color: #bbb;
+}
+
+.content {
+    margin-left: 100px; /* Šířka postranní lišty */
+    padding: 20px;
+    padding-left: 100px; /* Přidání místa na levé straně obsahu */
+}
+
+body p {
+margin-right: 5%;
+}
+
+li {
+    text-align: left;
+    }
+
+main li {
+    margin-right: 15%;
+    margin-bottom: 2pt;
+    font-size: 90%;
+    font-family: 'Libre Franklin', sans-serif;
+    }
+
+main ul {
+    margin-top: -10px;
+    }
+
+h2 {
+    margin-right: 30px; /* Přidání místa na levé straně obsahu */
+}
+
+.sidebar-footer {
+    display: none; /* Použijeme flexbox pro umístění prvků vedle sebe */
+    justify-content: space-between; /* Rozložení prvků rovnoměrně na šířce "sidebar-footer-content" */
+    flex-wrap: nowrap; /* Zakázat zalamování prvků na nové řádky */
+    position: fixed; /* Upevnění na stránce */
+    bottom: 0; /* Zarovnání k dolní hraně stránky */
+    left: 0; /* Zarovnání k levé hraně stránky */
+    width: 100%; /* Šířka 100% stránky */
+    background-color: #f0f0f0; /* Barva pozadí */
+    padding: 10px; /* Vnitřní odsazení */
+    border-top: 1px solid #ddd; /* Horní ohraničení */
+    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Stín */
+    z-index: 1000; /* Pořadí vzhledem k ostatním prvkům */
+    background-color: #111;
+}
+
+.footer-link {
+    margin-right: 5px; /* Přidá mezeru mezi odkazy */
+    color: white; /* Nastaví bílé písmo */
+    text-decoration: none; /* Odstraní podtržení odkazů */
+}
+
+
+table {
+    width: 300pt; /* Make the table take up the full width of its container */
+    border-collapse: collapse; /* Collapse the borders of the table cells */
+  }
+
+  th, td {
+    padding: 8px; /* Add padding inside the table cells */
+    border: 1px solid #dddddd4d; /* Add a border around each table cell */
+  }
+
+  tr:nth-child(even) {
+    background-color: #f6e2a965; /* Add a background color to every other row */
+  }
+
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        display: none;}
+    .content {
+        margin-left: 20px; /* Šířka postranní lišty */
+        padding: 0px;
+        margin-right: 10px;
+        padding-left: 0px;
+        margin-bottom: 30pt; /* Přidání místa na levé straně obsahu */
+    }
+    .sidebar-footer {
+        display: flex; /* Zobrazíme footer postranního panelu */
+        /* Styly pro footer postranního panelu */
+    }
+
+    h2{
+        font-size: 180%;
+    }
+
+    body {
+        font-size: 11pt;
+    }
+
+    body p {
+        margin-right: 10px;
+        margin-left: 0px; /* Přidání místa na levé straně obsahu */
+    }
+    }
+
+
+@media screen and (max-width: 1200px) {
+    body p {
+        margin-right: 30px; /* Přidání místa na levé straně obsahu */
+    }
+    h2 {
+        margin-right: 30px; /* Přidání místa na levé straně obsahu */
+    }
+    }
+
+@media screen and (max-width: 900px) {
+    body p {
+        margin-right: 20px; /* Přidání místa na levé straně obsahu */
+    }
+    h2 {
+        font-size: 180%;
+        margin-right: 20px; /* Přidání místa na levé straně obsahu */
+    }
+    
+    }
+
+
+@media screen and (max-width: 500px) {
+    table {
+        width: 250pt;
+      }
+    }
+
+@media print {
+    .sidebar-footer {
+        display: none;
+    }
+    .sidebar {
+        display: none;
+    }
+    .buttons {
+        display: none;
+    }
+    .content {
+        margin-left: 40px; /* Šířka postranní lišty */
+        padding: 20px;
+    }
+
+    }    
+
+
+

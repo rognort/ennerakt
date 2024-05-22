@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ennerakt</title>
+    <link rel="stylesheet" href="static/styles/map_style.css">
+
+    <style>
+        .frame-container {
+            position: fixed;
+            top: 50%;
+            left: 45%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 5px solid black;
+            overflow: hidden;
+            width: 80vw; /* 80% of the viewport width */
+            height: 55vw; /* 55% of the viewport width, maintaining the aspect ratio 80:55 */
+            max-height: 88vh; /* The maximum height is 100% of the viewport */
+            max-width: 128vh; /* The maximum width corresponds to the aspect ratio and height of the viewport */
+            margin-top: -1%;
+
+        }
+
+        .map-container {
+            width: 100%; /* 100% of the width of .frame-container */
+            height: 100%; /* 100% of the height of .frame-container */
+            position: relative;
+            background: white;
+        }
+
+        .map-container img {
+            width: 100%;
+            height: auto;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            transform-origin: 50% 50%;
+        }
+
+        .controls {
+            position: fixed;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        button {
+            margin-bottom: 10px; /* Spacing between buttons when on the right */
+            margin-right: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 110px;
+            height: 60px;
+        }
+
+        
+        .sidebar-footer {
+            justify-content: space-between; /* Rozložení prvků rovnoměrně na šířce "sidebar-footer-content" */
+            flex-wrap: nowrap; /* Zakázat zalamování prvků na nové řádky */
+            position: fixed; /* Upevnění na stránce */
+            bottom: 0; /* Zarovnání k dolní hraně stránky */
+            left: 0; /* Zarovnání k levé hraně stránky */
+            width: 100%; /* Šířka 100% stránky */
+            background-color: #f0f0f0; /* Barva pozadí */
+            padding: 10px; /* Vnitřní odsazení */
+            border-top: 1px solid #ddd; /* Horní ohraničení */
+            box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1); /* Stín */
+            z-index: 1000; /* Pořadí vzhledem k ostatním prvkům */
+            background-color: #111;
+        }
+       
+        @media (min-width: 1450px) {
+            .sidebar-footer {
+                display: none;
+            }
+            .frame-container {
+            margin-left: 70px;
+            margin-top: 10px;
+            }
+
+            .controls{
+            margin-right: 70px;
+            }
+        }
+
+        @media (max-width: 1450px) {
+            .sidebar {
+                display: none;
+            }
+            .frame-container {
+            margin-left: 0px;
+            margin-top: -10px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .controls {
+                position: static;
+                transform: none;
+                top: auto;
+                right: auto;
+                display: flex;
+                justify-content: center;
+                flex-direction: row;
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .sidebar {
+                display: none;
+            }
+            
+
+            button {
+                padding: 20px 25px; /* Increased top and bottom padding for buttons on top */
+                margin-right: 10px; /* Spacing between buttons when on top */
+                margin-bottom: 0;
+            }
+
+            button:last-child {
+                margin-right: 0;
+            }
+
+            .frame-container {
+            left: 50%;
+            margin-top: 10px;
+            }
+        }
+    </style>
+</head>
+
+<footer class="sidebar-footer">
+    <!-- Obsah pro "footer" postranního panelu -->
+    <div class="sidebar-footer-content">
+        <!-- Prvky, které mají být vedle sebe -->
+        <a href="/uvod" class="footer-link">Úvod</a>
+        <a href="/kultury" class="footer-link">Kultury</a>
+        <a href="/mapa" class="footer-link">Mapa</a>
+        <a href="/postava" class="footer-link">Tvá postava!</a>
+    </div>
+</footer>
+
+
+<div class="sidebar">
+    <img src="\static\images\ennerakt_symbol.png" alt="ennerakt_symbol" width="100" height="100" style="margin-left: 20px;">
+    <br>
+    <ul>
+        <li><a href="/uvod">Úvod</a></li>
+        <li><a href="/kultury">Kultury</a></li>
+        <ul>
+            {% for culture,kultura in kuzip %}
+                <li style="font-size: 80%;margin-left: 25pt;margin-top: -15pt;"><a href="/kultury/{{ culture }}">{{ kultura }}</a></li>
+            {% endfor %}
+        </ul>
+        <li><a href="/mapa">Mapa</a></li>
+        <li><a href="/postava">Tvá postava!</a></li>
+        <li style="position: absolute; bottom: 20pt; margin-right: -5pt;font-size:8pt"><a href="/" class="footer-link"> © Jan Štefanišin 2024</a></li>
+    </ul>
+</div>
+
+<body>
+    <div class="frame-container">
+        <div class="map-container">
+            <img id="map1" src="static/images/Mapa 481 (bez politiky).png" alt="Mapa" style="opacity: 1;">
+            <img id="map2" src="static/images/Mapa 481.png" alt="Mapa" style="opacity: 0;">
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="zoom-button" id="default-btn">🔍 0x</button>
+        <button class="zoom-button" id="zoom2x-btn">🔍 2x</button>
+        <button class="zoom-button" id="zoom3x-btn">🔍 3x</button>
+        <button class="toggle-button" id="toggle-btn">Politika</button>
+    </div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const map1 = document.getElementById('map1');
+            const map2 = document.getElementById('map2');
+            const defaultBtn = document.getElementById('default-btn');
+            const zoom2xBtn = document.getElementById('zoom2x-btn');
+            const zoom3xBtn = document.getElementById('zoom3x-btn');
+            const toggleBtn = document.getElementById('toggle-btn');
+            let scale = 1;
+            let mapX = 0, mapY = 0;
+
+            function updateMapTransform(map) {
+                map.style.transform = `translate(${mapX}px, ${mapY}px) scale(${scale})`;
+            }
+
+            function limitTranslation() {
+                const maxTranslateX = scale * map1.clientWidth / 2 - map1.clientWidth / 2;
+                const maxTranslateY = scale * map1.clientHeight / 2 - map1.clientHeight / 2;
+                mapX = Math.min(Math.max(mapX, -maxTranslateX), maxTranslateX);
+                mapY = Math.min(Math.max(mapY, -maxTranslateY), maxTranslateY);
+            }
+
+            [defaultBtn, zoom2xBtn, zoom3xBtn].forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this === defaultBtn) scale = 1;
+                    if (this === zoom2xBtn) scale = 2;
+                    if (this === zoom3xBtn) scale = 3;
+                    limitTranslation();
+                    updateMapTransform(map1);
+                    updateMapTransform(map2);
+                });
+            });
+
+            toggleBtn.addEventListener('click', function() {
+                if (map2.style.opacity == '1') {
+                    map1.style.opacity = '1';
+                    map2.style.opacity = '0';
+                } else {
+                    map1.style.opacity = '1';
+                    map2.style.opacity = '1';
+                }
+            });
+
+            [map1, map2].forEach(map => {
+                map.addEventListener('mousedown', function(e) {
+                    const startX = e.clientX - mapX;
+                    const startY = e.clientY - mapY;
+                    function onMouseMove(e) {
+                        mapX = e.clientX - startX;
+                        mapY = e.clientY - startY;
+                        limitTranslation();
+                        updateMapTransform(map1);
+                        updateMapTransform(map2);
+                    }
+                    function onMouseUp() {
+                        window.removeEventListener('mousemove', onMouseMove);
+                        window.removeEventListener('mouseup', onMouseUp);
+                    }
+                    window.addEventListener('mousemove', onMouseMove);
+                    window.addEventListener('mouseup', onMouseUp);
+                    e.preventDefault();
+                });
+            });
+        });
+    </script>
+</body>
+</html>

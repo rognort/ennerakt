@@ -1,0 +1,18 @@
+{% extends 'sablona.html' %}
+{% block hlavni_obsah %}
+<main>
+    <h2>Rasy jsou mrtvé! Ať žijí Kultury!</h2>
+    <p>Největší změna oproti základním pravidlům 5e je jasná. Ve světě Prachu a Soli nejsou hratelné fantasy rasy. Všechny hráčské postavy jsou lidé. Ne, naštěstí ne zákldní +1 do všech vlastností lidé. <strong>Každá postava má nějakou kulturu</strong>, která funguje stejně jako rasa v 5e. Téměř stejně. Největší změnou je, že Kultury jsou udělané na míru settingu. To znamená, že z každé části kus loru světa Prachu a Soli. Pokud se třeba ptáte, o jakou sůl, že jde, odpoví vám hned první kultura. Další dvě vás seznámí s velmocemi Pevniny. Postupně se vám před očima vykreslí celý svět.</p>
+    <h2>Kulturní perky a Spojování kultur</h2>
+    <p><strong>Každá Kultura má seznam Kulturních perků</strong>. To je seznam schopností typických pro jedince dané kultury. Nad seznamy <strong>Kulturních perků</strong> píšu, že jich <strong>lze mít jakýkoli počet</strong>. To je pravda! Počítá se s tím, že se k tomu budete chovat rozumně a na nebrat si jih hodně. <strong>Doporučuji kolem dvou, tří</strong>. Pokud si jich vezmete víc a nějaké komplikovanější, je stejně šance, že se na něco zapomene. Navíc určitě nechcete vypadat jako nenasyta, co si jich vybral dvacet. <strong>Mělo by to sedět postavě a backstory.</strong> Kulturní perky lze také získat během hry na každém 4. levelu místo Featu. Lze je ovšem získat jen <strong>kulturní výměnou</strong>, tedy jen z těch kultur, se kterými jste se v kampani setkali.</p>
+    <p>Pokud postava strávila čas v jiné než své původní Kultuře, nebo jí byla jinak ovlivněna, nebo se narodila do multikulturní rodiny, pak si hráč vybere <strong>jednu Kulturu jako primární, ale má nárok na perky i z té druhé, případně třetí, pokud to dává smysl.</strong></p>
+    <p>Pokud postava nezapadá do své a žádné jiné kultury, asi je možné si vzít basic člověka s +1 v každé vlastnosti, a zcela jistě a povinně s nějakým kulturním perkem navíc. Někde ta postava žít musela.</p>
+    <hr>
+    <br>
+    <ul style="columns: 4; -webkit-columns: 4; -moz-columns: 4; ">
+        {% for culture,kultura in kuzip %}
+            <li style="font-size: 110%;"><a href="/kultury/{{ culture }}">{{ kultura }}</a></li>
+        {% endfor %}
+    </ul>
+</main>
+{% endblock %}

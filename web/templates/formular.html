@@ -1,0 +1,21 @@
+{% extends 'sablona.html' %}
+
+{% block hlavni_obsah %}
+    <h2>Zasli recept</h2>
+    <form action="/formular" method="POST">
+        <fieldset>
+            <label for="nazev">Nazev: </label>
+            <input type="text" name="nazev" required>
+            <br><br>
+            <label for="popis">Popis: </label>
+            <textarea rows="5" cols="30" name="popis" required></textarea>
+        </fieldset>
+
+        <button type="submit">Odeslat</button>
+    </form>
+    
+    {% if informace %}
+        <p style="color: green">{{ informace }}</p>
+    {% endif %}
+
+{% endblock %}

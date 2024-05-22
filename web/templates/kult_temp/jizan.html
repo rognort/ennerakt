@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="../static/styles/style.css">
+{% extends 'kult_sablona.html' %}
+{% block sloupec_1 %}
+    {{ culture_dict['info'] | safe }}
+{% endblock %}
+{% block sloupec_2 %}
+    <form action="/uloz" method="POST">
+        <input type="hidden" name="key1" value="kultura">
+        <input type="hidden" name="value1" value="<h4>{{ culture_dict['name']}}</h4><br>{{ culture_dict['stats'] }}">
+        <input type="hidden" name="key2" value="podkultura">
+        <input type="hidden" name="value2" value="">
+        <div style="display: flex;margin-top: 25pt; margin-bottom: -5pt;">
+            <h4>Atributy kultury</h4><button type="submit" style=" margin-top: 18pt; margin-bottom: 0;margin-left: 10pt;">►</button>
+        </div>
+    </form>
+    {{ culture_dict['prupovidka1'] | safe }}
+    {{ culture_dict['stats'] | safe }}
+    {{ culture_dict['prupovidka2'] | safe }}
+    <form action="/perks" method="post">
+        <div style="display: flex;margin-top: 5pt; margin-bottom: -5pt;">
+            <h4>Kulturní perky</h4><button type="submit" style=" margin-top: 18pt; margin-bottom: 0;margin-left: 10pt;">►</button>
+        </div>
+        {{ culture_dict['prupovidka3'] | safe }}
+        <ul style="margin-top: 5pt;">
+        {% for perk in culture_dict['perks'] %}
+            <li style="list-style: none; margin-left: -15pt; text-indent: -20pt;">
+                <input type="checkbox" name="perks" value="{{ perk['název'] }}: {{ perk['popis'] }}"> <strong>{{ perk['název'] }}</strong>: {{ perk['popis'] }}
+            </li>
+        {% endfor %}
+        </ul>
+    </form>
+{% endblock %}

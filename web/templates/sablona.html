@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ennerakt</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <img src="\static\images\ennerakt_symbol.png" alt="ennerakt_symbol" width="100" height="100" style="margin-left: 20px;">
+        <br>
+        <ul>
+            <li><a href="/uvod">Úvod</a></li>
+            <li><a href="/kultury">Kultury</a></li>
+            <ul>
+                {% for culture,kultura in kuzip %}
+                    <li style="font-size: 80%;margin-left: 25pt;margin-top: -15pt;"><a href="/kultury/{{ culture }}">{{ kultura }}</a></li>
+                {% endfor %}
+            </ul>
+            <li><a href="/mapa">Mapa</a></li>
+            <li><a href="/postava">Tvá postava!</a></li>
+            <li style="position: absolute; bottom: 20pt; margin-right: -5pt;font-size:8pt"><a href="/" class="footer-link"> © Jan Štefanišin 2024</a></li>
+        </ul>
+    </div>
+
+    <footer class="sidebar-footer">
+        <!-- Obsah pro "footer" postranního panelu -->
+        <div class="sidebar-footer-content">
+            <!-- Prvky, které mají být vedle sebe -->
+            <a href="/uvod" class="footer-link">Úvod</a>
+            <a href="/kultury" class="footer-link">Kultury</a>
+            <a href="/mapa" class="footer-link">Mapa</a>
+            <a href="/postava" class="footer-link">Tvá postava!</a>
+        </div>
+        <div class="sidebar-footer-content", style="text-align:right;margin-right:10pt;font-size:9pt">
+            <a href="/" class="footer-link"> © Jan Štefanišin 2024</a>
+        </div>
+    </footer>
+
+
+    <div class="content">
+        <header>
+            <h1><span style="font-family:  'Lora', serif;letter-spacing:10px;">
+                ENNERAKT
+                </span></h1>
+            <h6 class="subheader"> <span style="font-family:  'Lora', serif;font-variant:small-caps;margin-right: 5px;">
+                svět prachu a soli
+                </span></h6>
+        </header>
+
+
+        <main>
+        {% block hlavni_obsah %}
+
+        {% endblock %}
+
+        </main>
+
+        <!--
+        <footer>
+            <p>&copy; 2024 Receptaromat</p>
+        </footer>
+         -->
+    </div>
+</body>
+</html>

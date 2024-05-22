@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, ">
+    <title>Ennerakt</title>
+    <style>
+
+
+        .column.smaller li {
+            font-size: 90% ;
+            margin-left: -20pt;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px; /* Mezera mezi sloupci */
+            margin-top: -20pt; /*????*/
+        }
+
+        .column.larger {
+            width: 60%; /* Šířka většího sloupce */
+        }
+
+        .column.smaller {
+            width: 38%; /* Šířka menšího sloupce */
+            font-size: 100%;
+        }
+            /* Černá čára mezi sloupci */
+
+        .column {
+            position: relative;
+            padding: 10px; /* Adjust padding as needed */
+        }
+
+        .column.larger::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            top: 7%;
+            background-color: black; /* Color of the vertical line */
+            box-shadow: 0px 0px 1px black;
+            right: 5pt; /* Position the line at the right side of the larger column */
+        }
+
+        /* Media query pro responzivní design */
+        @media screen and (max-width: 1200px) {
+
+            h2 {
+                font-size: 30pt;
+            }
+
+            .container {
+                flex-direction: column; /* Převést na vertikální uspořádání */
+            }
+            .column.larger {
+                width: 97%;
+                margin-bottom: -20pt; /* Šířka většího sloupce */
+            }
+            .column.smaller {
+                width: 97%; /* Šířka menšího sloupce */
+                font-size: 100%;
+            }
+
+            .column.larger::after {
+          display: none;
+            }
+
+            .column.larger::before {
+                content: ''; /* Add content for the pseudo-element */
+                position: absolute;
+                left: 50%; /* Align the left edge of the line to the center of the column */
+                transform: translateX(-55%); /* Move the line back by half of its width */
+                bottom: -1px; /* Adjust position to align with the bottom of the larger column */
+                width: 90%; /* Width of the horizontal line */
+                height: 1px; /* Height of the horizontal line */
+                background-color: black; /* Color of the horizontal line */
+                box-shadow: 0px 0px 1px black;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <img src="\static\images\ennerakt_symbol.png" alt="ennerakt_symbol" width="100" height="100" style="margin-left: 20px;margin-bottom: 3pt;">
+        <br>
+        <ul>
+            <li style="margin-top: 2pt;"><a href="/uvod">Úvod</a></li>
+            <li><a href="/kultury">Kultury</a></li>
+            <ul>
+                {% for culture,kultura in kuzip %}
+                    <li style="font-size: 80%;margin-left: 25pt;margin-top: -15pt;"><a href="/kultury/{{ culture }}">{{ kultura }}</a></li>
+                {% endfor %}
+            </ul>
+            <li><a href="/mapa">Mapa</a></li>
+            <li><a href="/postava">Tvá postava!</a></li>
+            <li style="position: absolute; bottom: 20pt; margin-right: -5pt;font-size:8pt"><a href="/" class="footer-link"> © Jan Štefanišin 2024</a></li>
+        </ul>
+    </div>
+    <footer class="sidebar-footer">
+        <!-- Obsah pro "footer" postranního panelu -->
+        <div class="sidebar-footer-content">
+            <!-- Prvky, které mají být vedle sebe -->
+            <a href="/uvod" class="footer-link">Úvod</a>
+            <a href="/kultury" class="footer-link">Kultury</a>
+            <a href="/mapa" class="footer-link">Mapa</a>
+            <a href="/postava" class="footer-link">Tvá postava!</a>
+        </div>
+        <div class="sidebar-footer-content", style="text-align:right;margin-right:10pt;font-size:9pt">
+            <a href="/" class="footer-link"> © Jan Štefanišin 2024</a>
+        </div>
+    </footer>
+    <div class="content">
+        <header>
+            <h1><span style="font-family:  'Lora', serif;letter-spacing:10px;">
+                ENNERAKT
+                </span></h1>
+            <h6 class="subheader"> <span style="font-family:  'Lora', serif;font-variant:small-caps;margin-right: 5px;">
+                svět prachu a soli
+                </span></h6>
+        </header>
+        <main>
+            <div class="container">
+                <div class="column larger">
+                    {% block sloupec_1 %}
+
+                    {% endblock %}
+                </div>
+                <div class="column smaller">
+                    {% block sloupec_2 %}
+
+                    {% endblock %}
+                </div>
+            </div>
+        </main>
+        <!--
+        <footer>
+            <p>&copy; 2024 Receptaromat</p>
+        </footer>
+         -->
+    </div>
+</body>
+</html>

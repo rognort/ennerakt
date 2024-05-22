@@ -1,0 +1,732 @@
+- lavra_dict:
+    name: Lavra
+    info: |
+      <h2>Lavra</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">"Hnis Rány světa."</span>
+      <span class="zdroj"> murská přezdívka pro Lavry</span></p>
+      <p>Tam, kde dříve bylo moře je dnes Rána světa. Právě tam proběhla největší bitva dnes už mrtvých bohů. Právě tam mnozí z nich zahynuli. Moře dříve spojovalo vše kolem, tisíce mil daleko. Dnes Pevninu rozděluje Velká solná poušť. Slané vichry sušují země okolo, zabíjí úrodu a lesy, stejně jako příšery, které v ní žijí, zabíjí zvěř a lidi. V poušti nikdo nepřežije. Pokud není Lavra.</p>
+      <h4>Tajemný původ</h4>
+      <p>Nikdo neví odkud Lavrové přišli. Jejich mytologie tvrdí, že byli vyhnáni do pouště Rány světa vládcem jménem Seteš a jeho lidmi. Lavrové je nadevše nenávidí. Avšak pokud Lavrové jsou z tohoto světa (a to není vůbec jisté), během ztraceného století se nadobro zapomnělo, kdo by Seteš a jeho lid měl být. A to dělá vše horším. Lavra může vidět Seteše v komkoliv. Lavrové jsou ostražití ke všem, protože neví, kdo je jejich nepřítel. A podle toho jsou od mládí vedeni k boji na smrt. Navíc lze Lavru k útoku vyprovokovat snadno omylem, jelikož porušit nějaký z jejich komplikovaných posvátných zvyků je velmi snadné. A nikdo nechce stát v cestě jejich noži.</p>
+      <h4>Život navzdor poušti</h4>
+      <p>Největším nepřítelem Lavrů je však poušť, Rána světa. Mocný vítr a slané bouře. Prokletá místa starých ostrovů a přístavů. Kostry podmořských bytostí probouzející se za nocí. Celá Rána světa, ta nehostinná skvrna na mapě světa, které jsou Lavrové jedinými obyvateli, a která je naučila neskutečné tvrdosti. Dá se říci, že Lavrové v ní prosperují. Jejich pevnosti a osady, která nesou název Lavra, přibývají podél pouště. Pravděpodobně hlouběji v ní existují i menší města. Možná, pokud ano, nikdo krom Lavrů je nikdy neviděl. Pokud už do pouště zavítá někdo jiný, třeba obchodník s karavanou zboží snaží se projít co nejrychleji skrz. Taková karavana je často obklopena najatými Lavry, kteří ji vedou pouští a chrání ji před monstry i počasím. Lavrové jsou také jediní, kteří se nebojí pouště prozkoumávat a pátrat po starých artefaktech starých civilizací. Nebo po Krvi bohů.</p>
+      <h4>Krev mrtvých bohů</h4>
+      <p>Celý život Lavrů je poznamenán Krví a Kostmi bohů, bílou a rudou solí, kterou jen oni v rozlehlé Ráně světa umějí nalézt. Lavrové solím dávají velký náboženský význam. Jejich šamani z nich dělají drogu, která jim dává prorocká vidění. Z rudé lze vyrobit extrémně silný střelný prach. Mnoho Lavrů je ozbrojeno střelnými zbraněmi. Nejsou však vysoké kvality, protože Lavrové nemají možnosti pro pokročilou práci s kovem. Rudé granáty jsou ale zbraní proslulou na celé Pevnině. Bílá sůl zase hoří za pokojové teploty. Historie ví jen o jednom jejím větším použití, to však zůstane dlouho v paměti světa a hlavně Murů. Během svých jižních tažení se Kazmer Stoletý spojil s Lavrou Baradur, jeho murské nepřátele to stálo celý jeden posvátný prales. Dnes je na jeho místě Velké spáleniště, které připomíná spíše Ránu světa než les. Murové nesnáší všechny Lavry a často se je pokusí zabít jen, co je spatří. Zabít Lavru není snadné, poznat jej však snadné je. Neprozrazuje je jen tmavší kůže a pouštní oblečení. Častý styk se solemi dal totiž Lavrům rudé a bílé oči, které vidí ve tmě.</p>
+    stats: |
+      <ul>
+          <li><strong>Zvýšení vlastností:</strong> +2 Dex, +1 Wis</li>
+          <li><strong>Lid nože:</strong> Nikdo neumí zacházet s noži jako Lavra. Nože a dýky v rukou Lavry dávají 1d6 poškození.</li>
+          <li><strong>Lid Rány světa:</strong> Máš výhodu na wis/int skill checky týkající se pouště Rány světa.</li>
+          <li><strong>Tvrdý život, krátký spánek:</strong> Tvůj Short rest trvá jen čtyři hodiny, Long rest jen jeden den.</li>
+          <li><strong>Jazyk Lavrů:</strong> Umíš mluvit a psát jazykem Lavri a jedním dalším jazykem.</li>
+      </ul>
+    sub_names:
+      - Rudý Lavra
+      - Bílý Lavra
+    subcultures:
+      - |
+        <br>
+        <ul>
+            <li><strong>Střelec:</strong> Proficienti ve střelných zbraních.</li>
+            <li><strong>Stopař:</strong> Proficienti v jakémkoli wis/dex skillu.</li>
+            <li><strong>Rudé oči:</strong> Darkvision na 30 ft.</li>
+        </ul>
+      - |
+        <br>
+        <ul>
+            <li><strong>Požehnání soli:</strong> Odolnost proti ohnivému poškození.</li>
+            <li><strong>Požehnání plamene:</strong> Firebolt, Produce flame, nebo Create Bonfire cantrip (k "seslání" je třeba bílá sůl).</li>
+            <li><strong>Bílé oči:</strong> Darkvision na 60 ft.</li>
+        </ul>
+    perks:
+      - název: Střelec
+        popis: Proficienti ve střelných zbraních.
+      - název: Rudé oči
+        popis: Darkvision na 30 ft.
+      - název: Lid nože
+        popis: Nože a dýky dávají 1d6/1d8/1d10 poškození. Jde o tři perky. Musí se jít postupně, nejdřív 1d6, pak dál…
+      - název: Solná alchymie
+        popis: Proficienti s alchymistickými nástroji.
+      - název: Stíny pouště
+        popis: Proficienti ve Stealth, nebo Survival skillu.
+      - název: Odplata plamenem
+        popis: Hellish rebuke jednou za Long rest (2nd level, kouzlo, ale k 'seslání' je potřeba bílá sůl).
+      - název: Zrozený v ohni
+        popis: Odolnost/Imunita na ohnivé poškození.
+      - název: Hbitost
+        popis: Přidává proficienti bonus k iniciativě.
+      - název: Jazyk ohně a soli
+        popis: Umí mluvit primordial jazykem.
+      - název: Pověrčivost
+        popis: Nevýhoda na hody proti strachu.
+      - název: Suchozemec
+        popis: Neumíš ani trochu plavat.
+    prupovidka1: <p>Jako Lavra máš následující atributy:</p>
+    prupovidka2: <p>Drtivá většina Lavrů patří mezi Rudé Lavry. Jedná se o stopaře, lovce a sběrače v poušti. Bílí Lavrové zabírají v Lavrách zvláštní mystické místo, říká se že vidí do budoucnosti, často se z nich stanou šamani své Lavry.</p>
+    prupovidka3: <p>Pokud jsi strávil dost času s Larvy, můžeš mít jakýkoli počet následujících perků. Některé perky mají více stupňů, v tom případě jeden musí mít předchozí stupěň, aby mohl mít další.</p>
+---
+- mestan_dict:
+    name: Měšťan
+    info: |
+      <h2>Měšťan</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">"Po Zlomu na celém světě zůstala jedna zem a tři města."</span>
+      <span class="zdroj"> Lars Sextus, O Velkém městě</span></p>
+      <p>Obyvatelé největších měst na světě mají mnoho společného. Vlivem jejich božstev (nebo snad díky výhodné poloze) se jim vyhnula většina pohrom, které stihly zbytek světa po Zlomu. Následně svět zachvátily nemoci a chaos. Ne tak Tři Města. Ve všech se objevili noví klerikové, ne starých mrtvých bohů, ale zcela nových a podivných božstev. Měšťané jsou oproti obyvatelům zbytku kontinentu vzdělanější, zcestovalejší a znalejší světa a historie. Jejich někdy až slepá víra (nebo zkušenosti s náboženstvím) je také dělá méně náchylné k tomu být uhranutí nečí vůlí.</p>
+      <h4>Velké město Katastrofa</h4>
+      <p>Kdo by neznal Velké město. S velikostí menšího královsví, zdaleka největší na světě. Katastrofu před slaným vět-rem Rány světa zachránily její zdi. A ty Zdi se staly božstvem. A tak se jich postavilo víc. Úroda uvnitř zdí roste desetkrát rychleji než jinde, kult Zdí disponuje léčivou magií. To, velká bezpečnost a dobrá poloha dělá z Katastrofy nejdůležitější obchodní uzel na Pevnině. Katastrofa je velmoc srovnatelná s Císařstvím. Moc jejích kneží ale nesahá za poslední Zeď. Možná proto tak často intrikují a bojují mezi sebou.</p>
+      <h4>Osiřelé město Chaire</h4>
+      <p>Jen málo toho Pevnina ví o Osiřelém městě. Teprve před sto lety se zjistilo, že na východ od pohoří Nekropole Titánů ještě někdo žije. Cestovatelé mluví o velkém skleněním městě, plném lidí tmavších než jsou Tajanci, Murové i Lavrové, kde nikdo nemá hlad a žije se v_absolutní harmonii. Možná nepřehání. Kdo viděl obří lodě Osiřelého města, nemůže nevěřit v jeho velikost, a kdo mluvil s jediným jeho obyvatelem, nemůže nebýt uchvácen jejich bodrou povahou. Spojení chairnáncká povaha se začíná dostávat do slovníku mnoha jazyků na Pevnině. Co se náboženství týče, vypadáto že Chairánci uctívají přírodu, osud nebo snad svět samotný.</p>
+      <h4>Čtyřměstí Slunceskonu</h4>
+      <p>Čtyřměstí se rozkládá kolem Velkého Jezera v samém srdci Císařství. Celé Císařství bylo zachráněno Mrtvým bohem. Ale Svobodné město Sluncesnon tehy dostalo navíc Nového boha. Paní nebo snad Pána Jezera? A tak prosperovalo a rostlo, stejně jako města kolem něj, až pohltilo další tři a téměř Jezero obklopilo. Ač stále svobodným městěm je dnes Čtyřměstí kulturním a obchodním centrem Císařství, kterému Ostrov, hlavní město Císařství, může jen závidět.</p>
+    stats: |
+      <ul>
+          <li><strong>Zvýšení vlastností:</strong> +1 Int, +1 Wis, +1 Cha</li>
+          <li><strong>Formální vzdělání:</strong> Proficienti v jednom Int skillu.</li>
+          <li><strong>Vliv teokracie:</strong> Výhoda na hody proti okouzlení.</li>
+          <li><strong>Civilizované násilí:</strong> Měšťané jen málokdy sahají po zbraních, když nemusí. Právě proto se umí rvát rukama. Tvůj unarmed strike je 1d4.</li>
+      </ul>
+    sub_names:
+      - Katastrofan
+      - Chairánec
+      - Čtyřměšťan
+    subcultures:
+      - |
+        <br>
+        <ul>
+            <li><strong>Stavitelé Zdí:</strong> Proficienti v řezbářských, v truhlářských nebo v kamenických nástrojích.</li>
+            <li><strong>Kulturní výměna:</strong> Katastrofština a další dva jazyky.</li>
+            <li><strong>Město intrik a obchodu:</strong> Proficienti v Deception.</li>
+        </ul>
+      - |
+        <br>
+        <ul>
+            <li><strong>Námořní mocnost:</strong> Proficienti v Ovládání lodí, nebo v Navigačních, nebo v Kartografických nástrojích.</li>
+            <li><strong>Kulturní výměna:</strong> Chairanština a další dva jazyky.</li>
+            <li><strong>Chairáncká povaha:</strong> Proficienti v Persuasion.</li>
+        </ul>
+      - |
+        <br>
+        <ul>
+            <li><strong>Mezi městy:</strong> Proficienti v Ovládání lodí, nebo povozů.</li>
+            <li><strong>Kulturní výměna:</strong> Císařština a další dva jazyky.</li>
+            <li><strong>Vliv Nového boha:</strong> Odolnost na psychické poškození.</li>
+        </ul>
+    perks:
+      - název: Stavitelé Zdí
+        popis: Profišnci v řezbářských, v truhlářských nebo v kamenických nástrojích.
+      - název: Kulturní výměna
+        popis: Katastrofština a další dva jazyky.
+      - název: Město intrik a obchodu
+        popis: Profišnci v Deception.
+      - název: Námořní mocnost
+        popis: Profišnci v Ovládání lodí, nebo v Navigačních, nebo v Kartografických nástrojích.
+      - název: Kulturní výměna
+        popis: Chairanština a další dva jazyky.
+      - název: Chairáncká povaha
+        popis: Profišnci v Persuasion.
+      - název: Mezi městy
+        popis: Profišnci v Ovládání lodí, nebo povozů.
+      - název: Kulturní výměna
+        popis: Císařština a další dva jazyky.
+      - název: Vliv Nového boha
+        popis: Odolnost na psychické poškození.
+    prupovidka1: <p>Jako Měšťan máš následující atributy:</p>
+    prupovidka2: ''
+    prupovidka3: <p>Navštívil-li jsi jedno z Měst, či v něm žil, můžeš mít jakýkoli počet následujících perků a perků pro to které Město:</p>
+---
+- cisarsky_dict:
+    name: Císařský
+    info: |
+      <h2>Císařský</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Nevládnou nám seveřané, ale císařští!“</span>
+      <span class="zdroj">nějaký jižan… nejspíš, a ono se to uchytilo</span></p>
+      <p>Bůh je mrtvý. Během Zlomu nás zachránil. Sám se obětoval a položil své tělo mezi Krevely a strašlivou ohnivou bouří. Obětoval se pro nás, a my musíme pro jiné. V to věří Císařští rytíři, vojáci, kněží a paladinové Mrtvého boha, ale i žoldáci, učenci a mniši. Mrtvého boha tam uctívá téměř každý, ale Císařští ho dělají uctívaným. Mezi Císařskými nenajdete prostého člověka. Všichni jsou do nějaké míry spojeni s šlechtou a od mládí jsou učeni k promlouvání k davům nebo k jiným jiným dvořanům, ke své správné prezentaci v jakémkoli prostředí a navíc k umění krasopisu jakému není rovno A to se hodí. Nakonec jsou to Císařští, kdo napíšou snad každou knihu, která není v katastrofštině.</p>
+      <h4>Císařství Čaroskolu</h4>
+      <p>Císařství je velmocí Pevniny, které se musí obávat každý, snad krom Katastrofanů. Vzniklo téměř dvě stě let zpátky, když se králi Parcivalovi z Mrtvým bohem zachráněných Krevel podařilo sjednotit severské pány a postavit se temnému lesu Lostorvu. Tehdy se dohodou s Velkým městem Katastrofou ustanovila Čarobrana a postavil se hrad Čaroskol, který má navždy chránit Pevninu před zlem Lesa. Hrad dal jméno i Parcvivalovu rodu a tím i jeho právě vzniklému Císařství, do jehož každého konce přinesl Parcival krevelskou kulturu a víru v Mrtvého boha.</p>
+      <h4>Krevelská jízda</h4>
+      <p>Jen století po Zlomu se kultura Mrtvého boha rozšířila i na jih Pevniny, když tam vyjela Krevelská jízda Erena Trolobijce. Pro země na jihu se žádný bůh neobětoval. Museli to udělat oni, Císařští. Nakonec přesně tak funguje víra v Mrtvého boha. Už je mrtvý. Je to na nás. My uděláme svět lepším. Protože po něm už nemusí nic být. Nakonec Bůh je mrtvý.
+      Erenovi rytíři jih osvobodili od trollů, alpů a jiných tyranů. Některé si lidé vybrali za krále, jiní dostali princeznu za ženu a celé království k tom, někteří jen hrad a zemi. Každopádně se z nich stala velká část šlechty na jihu.</p>
+      <h4>Kazmer - Stoletý císař</h4>
+      <p>Víra Císařských, a dnes velké většiny Pevniny se manifestuje dvěma způsoby. Prvním z nich se šíří rychle. Jako jezdci na koních se Císařští ženou světem a mečem se snaží pomoct, kde můžou. Mrtvý bůh neměl meč, ale on byl bůh, a my nejsme, my potřebujeme meč. Druhý směr kráčí po světě s rozvahou a snaží se pomáhat v malých věcech. Kněží Mrtvého boha jsou nejlepší lékaři na světě nevládnoucí magií. Kdo z nich není lékař je učencem v jiném oboru. Jedni pracují válkou a druzí mírem. Tento podivný rozpor v sobě nejlépe ztělesňoval Kazmer Veliký, Stoletý císař. Jen pár let po založení Čaroskolu se Parcivalův syn Parcival II. pokusil zdanit jižní državy potomků Krevelské jízdy. V odpověď na tento podivný nárok jej vyzval na souboj na meči Erenův potomek a zabil jej. Mladý Kazmer do války o nástupnictví vstoupil jako outsider. Nakonec se však dobyl do pozice Císaře sjednoceného severu. Nečekaně pak překročil poušť Rány světa a porazil Jižany, Mury i Tajance a stejně jako jeho děd i temný les Lostorvu. A potom po padesáti letech války, vládl padesát let míru. Na cestě jeho dobývání dnes stojí Císařská cesta, symbol toho míru, na kterém pracovali všichni vítězové i poražení, a který je jim všem k užitku.</p>
+    sub_names:
+      - Jezdec
+      - Chodec
+    subcultures:
+      - <br>
+        <ul>
+          <li><strong>Zvýšení vlastností:</strong> +1 Str</li>
+          <li><strong>Rytířský výcvik:</strong> Proficienti v Lehké a ve Střední zbroji, zároveň nemůžeš být zatížen zbrojí. Navíc jednou za Short rest, pokud nosíš alespoň Střední zbroj, si můžeš do konce kola přidat AC rovné profišnci bonusu jako reakci na úspěšný útok proti tobě.</li>
+          <li><strong>Formální vzdělání:</strong> Proficienti ve dvou Int/Cha skillech.</li>
+        </ul>
+      - <br>
+        <ul>
+          <li><strong>Zvýšení vlastností:</strong> +1 do jakékoli vlastnosti</li>
+          <li><strong>Ve stopách boha:</strong> Odolnost na zářné poškození.</li>
+          <li><strong>Základní výcvik:</strong> Proficienti v Lehké zbroji.</li>
+          <li><strong>Vysoké vzdělání:</strong> Expertýza v jednom wis/int skillu (pokud už jsi ve skillu profišnt, navíc jedno profišnci).</li>
+        </ul>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +2 Cha</li>
+        <li><strong>Jazyk Území:</strong> Ať už jsi Císařský odkudkoli, umíš mluvit a psát Císařštinou a jazykem území, kdes vyrůstal.</li>
+        <li><strong>Slovo mocnější...</strong> Proficienti v Kaligrafii.</li>
+        <li><strong>...meče:</strong> Proficienti v Krátkém a Dlouhém meči.</li>
+      </ul>
+    perks:
+      - název: Život v sedle
+        popis: Profišnci v Animal handling.
+      - název: Medicína věda je
+        popis: Profišnci v Medicine.
+      - název: Odkaz Krále Paladina
+        popis: Jednou za Long rest jako akci vyléčíš počet BB odpovídající tvému levelu. Na dotek.
+      - název: Oběť
+        popis: Jednou za Short rest jako reakci přijmeš poškození z úspěšného útoku na spojence ve vzdálenosti až 10 ft.
+      - název: Vyšší oběť
+        popis: Warding Bond spell, jednou za Long rest.
+      - název: Vysvěcený
+        popis: Bless spell jednou za odpočinek (není kouzlo).
+      - název: Student nebeského
+        popis: Umíš mluvit a psát Celestialem.
+      - název: Zbrojnoš
+        popis: Profišnci v jedné strength-based martial zbrani.
+      - název: Smetánka
+        popis: Jednou za Long rest máš výhodu na charisma check proti jedincům z vyšší společnosti.
+      - název: Nepřítel lidu
+        popis: Nevýhoda na Charisma checky při jednání s jedinci, co nenávidí Císařství (a že jich je).
+    prupovidka1: <p>Jako Císařský máš následující atributy:</p>
+    prupovidka2: <p>Císařští následují odkazu Mrtvého boha - někteří rychle svírajíc zbraň, jiní pomalu rozjímajíc o světě.</p>
+    prupovidka3: <p>Pokud jsi přišel do kontaktu s Císařskými a vírou v Mrtvého boha, můžeš mít jakýkoli počet následujících perků:</p>
+---
+- severan_dict:
+    name: Seveřan
+    info: |
+      <h2>Seveřan</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Už jsi to slyšel, ne? To jak se jmenuje hlavní město Císařství. Je to Ostrov! A to je od slova ostrý. Ostrý! Ostrý! A takoví jsme my.“</span><span class="zdroj"> ostrovské rčení</span></p>
+      <p>Ze severu a východu nehostinné ledové pláně barbarů a vlků. Ze západu a jihu prokleté pouště a lesy mnoha netvorů a nočních můr. Seveřané po celá dlouhá staletí bojovali se svým okolím. Byly spoustou malých kultur spojených svou válečnou historií. Právě proto se je podařilo králi Parcivalovi spojit v jednu armádu a společně s Krevelskými rytíři a prvními mágy Kruhu porazit temný les Lostorv. Vniklo tak obrovské Císařství Čaroskolu, velmoc Pevniny. V něm s poraženým Lostorvem měli Seveřané konečně žít v míru.</p>
+      <h4>Válka</h4>
+      <p>Místo toho Parcivalův syn krátce po smrti otce a své korunovaci, zemřel v souboji s jižanským rytířem. Přišla válka o následnictví císařského trůnu. Tehdy Parcivalův nejmladší vnuk, mladý vládce z pohraničí, dokonale využil potenciál zkušených severských bojovníků. Vštípil jim disciplínu, naučil bojové taktiky, a_nakonec s touto novou armádou porazil všechny své oponenty, včetně rytíířů z Krevel. Mír ale nepřišel ani potom, co byl tento mladík korunován císařem. Naopak o dva roky později vedl Kazmer spojenou armádu seveřanů přes Ránu světa na jih, pomstít svého otce. Severská armáda s Kazmerem prošla celou Pevninu a porazila každého nepřítele, který se jí postavil. Dodnes o více než sto let později jsou seveřané tvrdí lidé s přetrvávající vojenskou tradicí, pyšní na úspěchy svých slavných dobývání.</p>
+      <h4>Mír</h4>
+      <p>Na druhou stranu poslední půlstoletí, celé tři generace, se jejich život vedl ve znamení míru. V pohraničí vypadá sever pořád stejně nebezpečně, ale v jeho jádru žijí lidé v_naprostém míru jako obyčejní farmáři, obchodníci a řemeslníci. Seveřané jsou tak rozdělení. Mnoho z nich stejně jako jejich páni čekají válku, nebo žije život na hranicích, kde ji vedou. Mnoho z nich si nepřeje nic než žít v míru a prosperitě, kterou jim předchozí válka dala. Ale možná to pořád mají v sobě. Možná by jim ta příští válka dala ještě více? Nakonec po další krizi nástupnictví je tu nový císař. Schopný a ambiziozní Kazmer Traen zatím vedl jen drobné výboje proti Murským klanům. Ale jih se opět bouří. Velká válka je cítit je vzduchu. Daně z jihu chodí čímdálvíc nepravidelněji. Budou to seveřani, kdo bude tvořit armádu Císařství, až se znovu potáhne jih. A možná to bude ještě větší válka než před sto lety. Možná konečně dojde střet Císařství s Velkým městem Katastrofou.</p>
+      <h4>Není seveřan jako seveřan</h4>
+      <p>Je potřeba podotknout jak moc se seveřané od sebe dokáží lišit. Mluví mnoha jazyky, které jsou si sice podobné, ale nejsou zdaleka stejné. Navíc nejvzdálenejší kouty severního Císařství jsou od sebe vzdálené víc než dva tisíce mil. Obyvatel Medvědí skály, na dalekém severu blízko Lostorvu, se liší od obyvatel Tajanska, tak jako se Vran liší od Lavry. Ačkoli snad všichni žijí pro mít nebo válku, identita jednotlivých seveřanů je vázaná spíše k jejich státu, což je velmi často Císařství jako celek, ale někdy také jeho menší samosprávná část, nebo historické území nějakého starého zaniklého státu.</p>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +1 Con</li>
+        <li><strong>Jazyky severu:</strong> Seveřané mluví severštinou a jedním dalším jazykem.</li>
+        <li><strong>Vojenská velmoc:</strong> Výhoda na History checky týkající se vojenské historie.</li>
+      </ul>
+    sub_names:
+      - Válka
+      - Mír
+    subcultures:
+      - |
+        <br>
+        <ul>
+          <li><strong>Zvýšení vlastností:</strong> +2 Str</li>
+          <li><strong>Severská fyzička:</strong> Proficienti v Athletics.</li>
+          <li><strong>Drž formaci!</strong> Proficienti v Kopí, Oštěpu a Píce.</li>
+          <li><strong>Zteč!</strong> Pokud se pohybuješ k nepříteli, můžeš použít Dash jako bonus akci.</li>
+          <li><strong>Povinná výzbroj:</strong> Proficienti v Lehké zbroji.</li>
+        </ul>
+      - |
+        <br>
+        <ul>
+          <li><strong>Zvýšení vlastností:</strong> +1 do jakékoli vlastnosti</li>
+          <li><strong>Obchod a řemeslo:</strong> Proficienti v jednom jazyku či v jakémkoli nástroji.</li>
+          <li><strong>Z dosahu meče:</strong> Můžeš použít Disengage a Hide akce jako bonus akci, a to v každém kole.</li>
+          <li><strong>Kaž mír ale nezaváhej:</strong> Výhoda na hody proti strachu.</li>
+        </ul>
+    perks:
+      - název: Kazmerský dril
+        popis: Jednou za kolo můžeš po neúspěšném útoku udělit cíli stejné poškození jako kdybys na kostkách hodil 0. (Pro účely některých pravidel tento útok netrefil.)
+      - název: Pivařská kultura
+        popis: Profišnci ve Pivovarnictví.
+      - název: Karbanická kultura
+        popis: Profišnci v jakékoli hazardní hře.
+      - název: Věrouka Mrtvého boha
+        popis: Profišnci v Insight.
+      - název: Oděn v oceli
+        popis: Profišnci ve Střední zbroji.
+      - název: Hrdinství severu
+        popis: Stejný efekt jako Heroism spell, ale není to kouzlo, jednou za Short rest.
+      - název: Ruka na jílci
+        popis: Nemůžeš být překvapen.
+      - název: Obranný postoj
+        popis: Pokud se toto kolo nepohneš, máš +1 AC.
+      - název: Plný sám sebe
+        popis: Seveřan má nevýhodu na jakékoli hody na Inteligence skill checky netýkající se severu.
+    prupovidka1: <p>Jako Seveřan máš následující atributy:</p>
+    prupovidka2: <p>Seveřané jsou rozdělení skoro půl napůl. Podobně jako Císařští, co jim vládnou. Mnoho z nich žije válkou nebo pro válku. Mnoho z nich chce žít v míru a káže ho.</p>
+    prupovidka3: <p>Pokud jsi přišel do kontaktu se severskou kulturou, i jako seveřan, můžeš mít jakýkoli počet následujících perků:</p>
+---
+- tajanec_dict:
+    name: Tajanec
+    info: |
+      <h2>Tajanec</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Nebyla nikdy naše. Tu zemi jsme ukradli jim. Proklatým rudým mágům. A pak znova zatraceným Alpům. Nepotřebujeme zemi, abychom byli tím, čím jsme. Něměli jsme ji v nejhorších chvílích našich dějin. Být Tajancem ne znamená patřit zemi, státu nebo lidu, ani sloužit Stráži. Je to nápad, idea! Být Tajancem je věcí víry!”</span>
+      <span class="zdroj">proslov Ermera stráže Zaltaria Tama</span></p>
+      <p>Tajanci celá staletí před Zlomem trpěli pod nadvládou magokracie. Během chaosu Zlomu se dokázali mobilizovat a magokracii svrhnout, jen aby se dostali pod nadvládu zlomených elfů, dnes známých spíše jako alpové. Na konci ztraceného století však Tajanci vstoupili do nového věku svobody.</p>
+      <h3>Pod Císařstvím</h3>
+      <p>Dnes je Tajansko sice vazalem Císařství, ale dostává se mu velkého vlivu a samostatnosti. A zejména pak Tajanské stráže. Po padesáti letech míru za vlády Kazmera a dalších padesáti pod jinými císaři se Tajanci změnili. Jediná podmínka tajanského vazalství bylo věčné uzákonění Tajanské stráže v celém Císařství. Tajanská stráž má povolení lovit nebezpečné bytosti a mágy, má také velký podíl na vládě v Tajansku.</p>
+      <p>Členové Stráže jsou snad jedinými, kdo dnes ovládá Tajanštinu. Obyčejné obyvatelstvo převzalo okolní severské jazyky. Vlastně byste mnoho z nich nepoznali od severena. Císařství si Tajansko kulturně podrobilo. Místo národa jsou tak Tajanci ve starém smyslu spíše doktrínou vyznačnoum svým odporem k magii.</p>
+      <h3>Nejen Stráž</h3>
+      <p>Dnešní Tajanci jsou lovci mágů, alpů, draků a jiných potvor, silně věřící, že nic z toho nemá právo existovat a že jen oni jsou obranou proti nim. Většina z nich patří přímo do Tajanské stráže.</p>
+      <p>Avšak pravý Tajanec členem Stráže být v žádném případě nemusí. Stále existují jednotlivci a komunity, které své děti vychovávají do tajanské víry na Stráži nezávisle. Tito stále učí své děti používat kuše, kdyby se objevil někde poblíž mág, a palcát, kdyby nemrtví. Některé takové komunity prosperují i mimo Tajansko, například v Království Jižního cípu, kde se mísí tajanská nenávist magii s murskou nenávistí k Lavrům a jejich zkázonosným solím.</p>
+      <h3>Zápalsko</h3>
+      <p>Zápalsko je území, které se táhne podél hor tvořících východní hranici Tajanska. Právě v těch horách se vedla poslední klimatická bitva s alpy, která skončila velkým magickým výbuchem. Velká část pohoří se roztrhla, krajina se zcela změnila. Dnes velký kus Zápalska vypadá jako řídké jezero s mnoha malými ostrými ostrůvky a útesy. Následný magický erupce se u mnoha zápalských dětí objevila schopnost odolávat magii. I dnes se v Zápalsku se každé dítě zkouší, zda nemá čarolamné nadání. Pokud se tato schopnost odhalí, jsou tyto děti odváděny do služeb Stráže a vycvičeny do jejích speciálních jednotek. V Zápalsku se také cvičí rekruti, ze kterých se mají stát Srážci.</p>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +2 Dex, +1 Int</li>
+        <li><strong>Paměť věřících:</strong> Proficienti v jednom z History, Arcana, Religion nebo Intimidation skillu.</li>
+        <li><strong>Jazyk území a víry:</strong> Zná prastarou Tajanštinu a jazyk území, kde jsi vyrůstal, a jeden další jazyk.</li>
+        <li><strong>Proti nemrtvým a mágům:</strong> Palcát pro mrtvé. Kuše na živé. Proficienti v Qaddara (1d8 mace) a v Těžké kuši.</li>
+      </ul>
+    sub_names:
+      - Člen komanda
+      - Stopař
+      - Čarolam
+    subcultures:
+      - |
+        <br>
+        <ul>
+          <li><strong>Tajanské bojové techniky:</strong> Můžeš procházet přes stejně velké nebo větší bytosti.</li>
+          <li><strong>Zajistit perimetr:</strong> Rychlost tvého lezení je 20 ft.</li>
+        </ul>
+      - |
+        <br>
+        <ul>
+          <li><strong>Citlivost na magii:</strong> Do jisté míry cítíš magii. K tomu navíc můžeš používat Detect magic spell jako rituál.</li>
+          <li><strong>Najít cíl:</strong> Proficienti v Survival nebo Investigation.</li>
+        </ul>
+      - |
+        <br>
+        <ul>
+          <li><strong>Dost:</strong> Jednou za Short rest můžeš seslat Dispel magic (nejde o kouzlo, ale o přirozenou schopnost).</li>
+          <li><strong>Zlomit čáry:</strong> Disponuješ přirozenou odolností na magii. Máš výhodu na záchranné hody proti magii.</li>
+        </ul>
+    perks:
+      - název: Jazyk minula
+        popis: Umíš mluvit a psát Jazykem Propasti.
+      - název: Jazyk víry
+        popis: Umíš mluvit a psát Tajanštinou.
+      - název: Znát svého nepřítele
+        popis: Profišnci v Arcana skillu.
+      - název: Pro ně není čestná smrt
+        popis: Profišnci v Jedech.
+      - název: Nulová vzdálenost
+        popis: Nemáš nevýhodu na útok zbraní na dálku, i když stojíš vedle nepřítele.
+      - název: Znič Zlomágství!
+        popis: Pokud někdo sešle 5 stop od tebe kouzlo, můžeš na něj jako reakci zaútočit.
+      - název: Virgule
+        popis: Za pomoci proutku či jiné rekvizity můžeš používat Detect magic spell jako rituál.
+      - název: Vzdor
+        popis: Výhoda na Int, Wis a Cha hody proti magii.
+      - název: Naučené dost
+        popis: Jednou za Short rest můžeš seslat Dispel magic spell (jde o kouzlo).
+      - název: Ne čárům
+        popis: Nemůžeš seslat jakékoli kouzlo, ani svitkem nebo předmětem.
+      - název: Ruce pryč mágů
+        popis: Přijímáš jen polovinu léčení z jakéhokoli magického zdroje, včetně alchymie.
+    prupovidka1: <p>Jako Tajanec máš následující atributy:</p>
+    prupovidka2: <p>Tajanci loví budany a monstra v Komandech nebo jednotlivě jako Stopaři, a to i mimo Stráž. Na magii odolní Čarolamové ze Zápalska jsou velmi vzácní.</p>
+    prupovidka3: <p>Pokud jsi se nechal ovlivnit vírou Tajanců, i jako Tajanec, můžeš mít jakýkoli počet následujících perků.</p>
+---
+- jizan_dict:
+    name: Jižan
+    info: |
+      <h2>Jižan</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Nic jako jižan neexistuje.”</span>
+      <span class="zdroj">Lars Sextus, Dobývání jihu</span></p>
+      <p>Jižané jsou podobně jako severané lidé mnoha kultur. Dávno před Zlomem spolu neměli mnoho společného. Jih se skládal z mnoha malých států. Mágokracie na samém jihu, mnoho malých hrabství a vévodství jen volně spojených pod korunou, támhle městský stát a tamhle údolí trpaslíků. Jediná věc, kterou opravdu měli a mají skoro všichni společnou, je jejich jazyk, ale ten nakonec sdílejí i s Mury, a podobá se i Katastrofštině. Společným se všemu lidu jihu se staly hrůzy Zlomy, které tam byly horší, než kdekoli jinde na Pevnině.</p>
+      <h3>Zlom a Tyrani</h3>
+      <p>Po Zlomu byl celý Jih, od solí zničené Ničízemě až po murské pralesy, zamořen netvory. Hadí lidé, trolové, goblini, alpové a démoni… a pořád ti samí mágové na samém jihu a jiní lidskí tyrani nejhoršího zrna. Těm všem dal Zlom příležitost se zmocnit vlády nad jižany. Podobné se dělo i na severu, v Tajansku i jinde. Na jihu ale trpěli nejdéle, celé Ztracené století a ještě dlouho potom, nepomohl Mrtvý bůh ani Zdi či pralesy. Kvůli nelidské povaze svých pánů trpěli i nejhůře. Jižané si přesto zachovali své osobnosti a kultury. A během vlády tyranů získali jeden společný rys, a to neskutečnou zarputilost, schopnost neskutečně trpět a stejně jít dál.</p>
+      <h3>Jízda Erenoru</h3>
+      <p>Jižany zachránila až záchraná svatá jízda rytířů z Krevel. Severští rytíři a z nich hlavně Eren dnes známý jako Eren Trollobijec tehdy dokázali porazit armádu trollů a osvobodit od nich velké území, dobrou pětinu celého jihu. Spustili tím řetězovou reakci úspěšných povstání a bitev. Za deset let bylo všechno zlo zabito, nebo vyhnáno do hor a džunglí Kararulu. Eren se stal králem nového království Erenor, a mnoho dalších rytířů se stalo šlechtou tam i v ostatních nových a obnovených státech svobodného jihu.
+      Se svobodou přinesli také víru v Mrtvého boha. Jih se v něčem začal velmi podobat severu. Ale zdaleka ne ve všem. Jižané si například nikdy nezvykli používat spojení Krevelská jízda, pro ně to vždy byla Jízda Erenoru.</p>
+      <h3>Osudný souboj a Kazmerova válka</h3>
+      <p>Parcival II. císař Čaroskolu si tohoto rozdílu nevšiml. Krátce po své korunovaci se rozhodl vybrat od daně svých leníků na jihu. Nakonec to byli Krevelané. Nepochopil, že jih se nehodlá vzdát svobody pro dalšího tyrana. Erenův potomek král Tristan ho v odpovědi vyzval na souboj na meče, který se odehrál na hradě Čaroskol. V soubojích na meče se většinou neumírá, vyhrává první krev. Tristan se přesto stal císařovrahem. Smrt císaře na jih nakonec zavedla Kazmera a severskou armádu. Dnes je království Erenor vazalem Císařství, na trůnu sedí vzdálený příbuzný Tristana ze severu. Sám Tristan a jeho věrní byli vyhnáni na Lostorv.
+      Ostatní jižní státy si zachovaly jistou samostatnost, ale všechny se zavázaly platit severu daně. Za Kazmerových padesát let míru, se nikdo nevzbouřil. S novou nástupnickou krizí se přísun peněz po Císařské cestě zastavil. Kromě Erenoru je skoro nikdo neobnovil, minimálně ne ve stejné míře. Výmluvou jižanských pánů bylo, že Císařská cesta je kolem pralesů Murů příliš nebezpečná. Ani po jejím zabezpečení však císař žádné peníze neobdržel. Je tak jen otázkou času, kdy svou armádu otočí na jih.</p>
+    stats: |
+      <ul>
+          <li><strong>Zvýšení vlastností:</strong> +1 a +2 do jakýchkoli vlastností.</li>
+          <li><strong>Různorodost:</strong> Proficienti ve dvou jakýchkoli skillech.</li>
+          <li><strong>Jazyk jihu:</strong> Umíš jižansky a jedním dalším jazykem.</li>
+          <li><strong>Zarputilost:</strong> Jedenkrát za Long rest můžeš přehodit svůj nepovedený hod dvacítkou (na útok, skill check, nebo saving throw). Navíc přehazuješ s výhodou, i když jsi ji předtím neměl.</li>
+          <!-- Jednou za Short rest, můžeš přehodit nepovedený hod na útok, skill check nebo saving throw. UPLNĚ ZMĚNIT! -->
+          <li><strong>Mnoho kultur jihu:</strong> Jižanských kultur je nespočetně. Narozdíl od docela podobných si severanů, jižané vlastně nemají nic společného. Povinně si vybíráš jeden Kulturní perk, který získal dospíváním na jihu.</li>
+      </ul>
+    perks:
+      - název: Jižanská kuchyně
+        popis: Jižané nešetří kořením. Jsou to nejlepší kuchaři na Pevnině. Proficienti v Kuchtění.
+      - název: Pobřežňan
+        popis: Život na pobřeží jednoho něco naučí. Proficienti v ovládání lodí.
+      - název: Kovárny jihu
+        popis: Ve Vulkaoru a Krajově jsou nejlepší kováři na světě. Proficienti v Kovářství
+      - název: Centrum módy
+        popis: Proficienti v Tkadlectví nebo Ševcovství.
+      - název: Zem kultury
+        popis: Tyrani jihu měli překvapice hodně rádi umění. Proficienti v jakémkoli hudebním nástroji, nebo v Malířství.
+      - název: Taroty jsou z jihu
+        popis: Augury spell jednou za Long rest. Není to kouzlo, ale vyžaduje nějakou rekvizitu, například taroty.
+      - název: Dáma je z jihu
+        popis: Proficienti v Investigation nebo v hazardní případně i ve stolní hře.
+      - název: Jazyk tyranů
+        popis: Něco tu po tyranech zůstalo, někteří na jihu stále umí mluvit a psát Goblinštinou.
+      - název: Horkokrevnost
+        popis: Naštvat jižana je jednoduché. A pak lítají talíře. Proficienti v používání improvizovaných zbraní.
+      - název: Výzva na souboj
+        popis: Jižané jsou známí svou ctí. Zavadit o ni je někdy velmi jednoduché. Compelled Duel spell jednou za Short rest, není kouzlo, DC je 8+Cha+proficienti bonus.
+      - název: Jižanský šerm
+        popis: Šerm je na jihu umění i sport. Jednou za kolo jako reakci můžeš přidat svůj Proficienti bonus ke svému AC a vykrýt tak jeden útok.
+      - název: Zbraně jihu
+        popis: Bojovníci jihu jsou známí svou extravagancí. Proficienti v Rapíru, v Řemdihu, nebo v jiné exotické zbrani.
+      - název: Zbraně bratrů z lesů
+        popis: Murové mají stejný jazyk jako jižané a jejich pralesy jsou blízko. Proficienti v Dlouhém luku.
+      - název: Energické představení
+        popis: Máš výhodu na první charisma check proti právě potkané osobě.
+    prupovidka1: <p>Jako Jižan máš následující atributy.</p>
+    prupovidka2: ''
+    prupovidka3: <p>Pokud jsi zavítal na jih, nebo ses jinak setkal s jižanskými kulturami, můžeš mít jakýkoli počet následujících perků.</p>
+---
+- branijec_dict:
+    name: Branijec
+    info: |
+      <h2>Branijec</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Směje se celá vesnice, že přemohla ho furie, Narovnaj se jim líce, však ona byla z Bránie.”</span>
+      <span class="zdroj">jižanská básnička</span></p>
+      <p>Nikde na Pevnině nenajdete takové válečníky jako za ní na ostrově Kul. Bojovníky možná ano, možná že Vranové jsou lepšími bojovníky, nebo že průměrný Lavra porazí průmerného Bránijce. Ale ani celá Lavra či celý kmen Vranů neprorazí štítovou hradbu Bráníjců. I_obávaní seveřani by s tím měli problém. Štít je pro Bránijce důležitým symbolem. Každé dítě v Bránii je hned po narození vyneseno na štítu a ukázáno osadě, zatímco otec provolává jeho jméno. Dále se dítě namáčí do kádě s mořskou vodou. Každý jeden Bránijec je zrozen pro moře a pro válku.</p>
+      <h4>Daleké ostrovy a Hadí břeh</h4>
+      <p>Nebo to se aspoň říká. Pravdou totiž je, že krom válek a_obchodu toho prostí obyvatelé ani učenci Pevniny o Bránijcích tolik neví. Je pravděpodobné, že jsou potomky obyvatel Mečitého pobřeží. Na ostrovy utekly po Zlomu, během kterého se většina Pobřeží ztratila. Pokud nepočítáme malou državu až příliš blízko temnému Lostorvu na to, aby se k ní kdokoli přiblížil, teprve před pár lety se Bránijci vrátili na Pevninu. Brzy po smrti Kazmera, obsadili Břehy poloostrova Karakul, které jim císař prý slíbil. To může a nemusí být pravda. Kazmer nenechal však žádný náznak toho, komu měl být Karakul přidělen. V každém případě tam na, jak tomu sami říkají, Hadím břehu dnes najdeme rozkvétající bránijské osady. Pořád k nim zavítá jen málo cestovatelů. Hluboké džungle Karakulu plné hadů a goblinů Hadí břeh zcela obklopují, a jen málokdo se jimi odváží projít. To z Hadího břehu dělá výborné místo k plánování obchoních cest i pirátských výbojů.</p>
+
+      <h4>Beseda vládců moří</h4>
+      <p>Bránijci jsou velcí individualisté, ale proslýchá se, že kapitáni jejich lodí se schází na shromáždění zvaném Beseda. Vytyčují si na ní hranice a dolmouvají případná spojenectví a dohody. Jednou takovou dohodou byla ta s‘’Císařstvím Čaroskolu za Kazmerovy války na jihu. Bránijci se tehdy ukázali jako nejlepší žoldácká armáda na světě. Vyhráli pro císaře mnoho důležitých bitev u_jižního pobřeží Pevniny. Dnes se proslýchá o dalším rozhodnutí Besedy, kterým má být nenapadání chairánckých lodí. To by znamenalo, že i Bránijci uznávají sílu lodí Osiřelého města.</p>
+
+      <h4>Pekelné lodě</h4>
+      <p>Bránijští obchodníci mohou nabídnout ta nejvzácnější zboží z nejvzdálnějších koutů Pevniny a z dalekých ostrovů. Mnoho jejich kapitánů se ale živí jen pirátstvím a pleněním. A otrokářstvím. K Bránijcům nikdy nedo- šla víra v Mrtvého boha, která vymýtila otrokářství z Pevniny. Někteří i kvůli tomu nepovažují Bránijce za lidi, ale za démony. Není se čemu divit. Nejlepší jejich lodě jsou z podivného temného dřeva a na přídi mají výjevy strašlivých monster. Jsou vyzbrojeny balistami, ale i podivnými magickými kanóny. Sami Bránijci se při přepadech stylyzují do nestvůr, nosí podivné oblečení a nezvyklé nelidské zbroje. Na Pevnině se samozřejmě objevují Bránijci i jako jednotlivci, obvykle se nechávají najímat jako žoldáci, nebo obchodují, někdy jen hledají dobrodružství. Lidé se jich často ptají, kde zvali Bránijci tyto lodě a kouzla. Odpovědí jim je většinou smích a‘ujištění, že je Bránijci ukradli ze samotných Pekel.</p>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +1 Str, +1 Dex, +1 Con</li>
+        <li><strong>Rána štítem:</strong> Proficienti ve štítech. Po útoku můžeš za bonus akci zaútočit štítem, základ poškození je 1d4.</li>
+        <li><strong>Námořní mocnost:</strong> Proficienti v ovládání lodí, nebo v navigačních, nebo v kartografických nástrojích.</li>
+        <li><strong>Kulturní výměna:</strong> Bránijci umí svým jazykem, tedy Bránijštinou, a dvěma dalšími jazyky.</li>
+      </ul>
+    sub_names:
+      - Moře
+      - Břeh
+    subcultures:
+      - <br>
+        <ul>
+          <li><strong>Nájezdník:</strong> Proficienti v Válečné sekerě (1d8/1d10).</li>
+          <li><strong>Obchodník:</strong> Proficienti v jednom Cha skillu.</li>
+          <li><strong>Oděn v oceli:</strong> Proficienti v Lehké a ve Střední zbroji, zároveň nemůže být zatížen zbrojí.</li>
+        </ul>
+      - <br>
+        <ul>
+          <li><strong>Těžká práce:</strong> Proficienti v jakýchkoli dvou skillech.</li>
+          <li><strong>Proti džungli:</strong> Proficienti v Mačetě (1d6 scimitar).</li>
+          <li><strong>Džungle v nás:</strong> Odolnost na poškození jedem.</li>
+        </ul>
+    perks:
+      - název: Flotila z Pekel
+        popis: Umíš mluvit a psát Baatorštinou.
+      - název: Smysl zla
+        popis: Detect Evil and Good spell jednou za Short rest.
+      - název: Zrak Pekel
+        popis: Darkvision na 30 ft.
+      - název: Mořský vlk
+        popis: Profišnci v ovládání lodí, v navigačních nástrojích a v kartografických nástrojích.
+      - název: Plavec
+        popis: Rychlost tvého plavání je 20 ft.
+      - název: Mistr manévrů
+        popis: Tvá rychlost je 35 ft.
+      - název: Štítonoš
+        popis: Profišnci ve štítech.
+      - název: Štítová hradba
+        popis: Pokud držíš štít a stojíš vedle dvou bojujících spojenců, máš výhodu na útok.
+      - název: Rána štítem
+        popis: Po útoku můžeš za bonus akci zaútočit štítem, základ poškození je 1d4.
+      - název: Ustoj úder
+        popis: Jsi vždy poslední v iniciativě.
+      - název: Démonická tetování
+        popis: Profišnci v Intimidation.
+    prupovidka1: <p>Jako Bránijec máš následující atributy.</p>
+    prupovidka2: <p>Bránijci jsou námořníci, ale za jejich domovy se rozléhají džungle plné pokladů a všelijakých nebezpečí. Mnoho z nich místo válčení a obchodování a plavení na moři zasvětilo život prohledávání a krocení těchto lesů.</p>
+    prupovidka3: <p>Pokud jsi se chvíli plavil s Bránijci, navštívil jejich ostrovy, nebo se stal jejich nepřítelem nebo zajatcem a otrokem, můžeš mít jakýkoli počet následujících perků.</p>
+---
+- mura_dict:
+    name: Mura
+    info: |
+      <h2>Mura</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Kazmerovi muži vítězili ve vršinách severu, nížinách jihu, zdolávali vojska a hrady. S pomocí bránijských žoldnéřů vítězili i na moři. Pak vstoupili do hlubin murských pralesů. A tam umírali.”</span>
+      <span class="zdroj">Lars Sextus, Císařská cesta</span></p>
+      <p>Murové nemají psanou historii, sami neví jak vypadala jejich společnost před Zlomem. Ze Ztraceného století vystoupili jako přemožitelé draků a ještěrů z Nekropolí. Jako neporazitelní bojovníci, lučištníci z hlubin pralesů a labyrintů hor. A i když o svou neporazitelnou pověst už přišli, nikdo se neodváží je podceněnovat.</p>
+      <h4>Posvátné bažiny Murkalaru</h4>
+      <p>Murové jsou jedním národem rozděleným na mnoho klanů. Většina Murů je podobně jako Tajanci nebo Lavrové snědá, najdou se mezi nimi však všechny odstíny kůže. Je pravděpodobné, že jako jeden národ vznikli až po Zlomu Lidé ze všech světových stran hledali před jeho hrůzami záchranu v hustých jižních pralesích. Pravděpodobně i Tajanci a mnoho jižanů. Napovídá tomu, že Murové mluví jižanským jazykem. Ač rozděleni na klany, většinou podle pralesa, či pohoří, které bývají, tvoří Murové do určité míry jednu entitu. Mají společný sněm, který se schází v posvátných mokřadech Murkalaru. Ten má mnohem větší slovo než třeba bránijská Beseda. Murkalar je duchovním centrem Murů, kde vůdci a druidi klanů rozhodují o koncích a začátcích válek. Kde přesně se Murkalar nachází se ale neví. Murové neprozrazují jeho polohu.</p>
+      <h4>Nepřítelem Císařství</h4>
+      <p>Nejdůležitější rozhodnutí v historii Murkalarského sněmu, bylo to postavit se na stranu jižanů během Kazmerova tažení. Murové bojovali ještě dávno potom, co poslední jižanská země padla. A císařská armáda trpěla pod deštěm šípů, který se na ně vrhnul kdykoli, kdy vkročili do jejich lesů a hor. Nakonec však byli Murové donuceni uzavřít příměří. Kazmer do své armády najal žoldáky z Lavry Baradur. Ať už to Lavrové udělali na vlastní pěst, nebo na jeho rozkaz, po další prohrané bitvě se rozhodli použít ve velkém svou bílou sůl. Zapálili jeden z největších Murských pralesů, a mocí Kostí bohů ho spálili na prach. Lavrové si vysloužili nehynoucí nenávist všech Murů a Kazmer titul Císař žhář. Murové se tehdy Císaři žháři vzdali. Jejich duch byl zlomen. Kazmer klanům nechal samostatnost, ale dosadil jim Velekrále, který byl ochotný přistoupit na některé jeho požadavky. Zejména na stavbu Císařské cesty skrz jeden prales. Murové přijali, v očekávání toho, že až císař i velekrál zemřou, jakékoli dohody s nimi skončí. Císařká cesta byl projekt na dlouhá léta. Kazmer a jeho velekrál ale vládli dalších padesát let.</p>
+      <h4>Mír a Jižní cíp</h4>
+      <p>Během půlstoletí míru se Murové změnili. Pořád jsou obávaní lukostřelci, lovci v lesích a ostrostřelci z výšek hor. Dnes ale částečně ve spojenectví s králem Jižního cípu, žijí v jeho městech a vesnicích, mají vlasní osady mimo prales. Jen málo Murů vyznává Mrtvého boha. Pořád jsou ale velmi spojeni s místy odkud přišli. Silně věří v moc živlů a přírody, každý klan si vysoce cení svých druidů, moudrých mužů velkých znalostí schopných magie. Také v nich zůstala opratrnost, bez které nešlo v¨pralesích ani v horách Nekropole přežít. Murové jsou velmi podezřívaví a tím i pozorní, jsou zvyklí hledat stopy monster a svých nepřátel a vyhýbat se číhajícím nebezpečenstvím, a to i v bezpečí civilizace.</p>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +2 Wis</li>
+        <li><strong>Vždy na pozoru:</strong> Proficienti v Perception.</li>
+        <li><strong>Národ luku:</strong> Proficienti v Krátkém i v Dlouhém luku.</li>
+        <li><strong>Jazyk jihu:</strong> Umíš jižanštinou a jeden další jazyk.</li>
+      </ul>
+    sub_names:
+      - Lesy
+      - Hory
+    subcultures:
+      - <br>
+          <ul>
+            <li><strong>Zvýšení vlastností:</strong> +1 Dex</li>
+            <li><strong>Murská chůze:</strong> Rychlost 35 ft.</li>
+            <li><strong>Útok ze zálohy:</strong> V prvním kole boje uděluješ překvapenému nepříeli o 2d6 poškození více.</li>
+          </ul>
+      - <br>
+          <ul>
+            <li><strong>Zvýšení vlastností:</strong> +1 Con</li>
+            <li><strong>Hory:</strong> Rychlost lezení 20 ft.</li>
+            <li><strong>Horalská tvrdost:</strong> Jednou za Short rest, když jsi zasažen, můžeš jako reakci ignorovat 1d12 + Con přijatého poškození.</li>
+          </ul>
+    perks:
+      - název: Jazyk poražených
+        popis: Umíš mluvit a psát Drakonštinou.
+      - název: Druidský výcvik
+        popis: Druidcraft cantrip.
+      - název: Nebojácnost
+        popis: Výhoda na hody proti strachu.
+      - název: Mura nemůže netrefit
+        popis: Pokud hodíš 1 nebo 2 na kostce na poškození Lukem, můžeš kostku přehodit (jednou za kolo).
+      - název: Murská chůze
+        popis: Tvá rychlost 35 feet.
+      - název: Horal
+        popis: Rychlost tvého lezení je 20 ft. Podruhé 30ft.
+      - název: Drakobijec
+        popis: Absorb Elements spell jednou za short rest.
+      - název: Nenávist Císařství
+        popis: Nevýhoda na Charisma checky proti císařské šlechtě, obchodníkům a podobným.
+      - název: V korunách stromů a hor
+        popis: Profišnci v Acrobatics, nebo profišnci ve Stealth, nebo profišnci v Nature.
+    prupovidka1: <p>Jako Mura máš následující atributy.</p>
+    prupovidka2: <p>Hvozdy a skaliska. Pro murské klany nehraje hranice mezi lesem a skalami velkou roli, klany se většinou nedělí na horské a lesní, ale každého jednoho Muru definuje místo, kde vyrůstal. Murové, kteří dali před lesy a horami přednost civilizaci, se dají pokládat za Jižany.</p>
+    prupovidka3: <p>Pokud jsi žil u Murů, v Jižním cípu či se jinak setkal s murskou kulturou, můžeš mít jakýkoli počet následujících perků.</p>
+---
+- starsi_dict:
+    name: Starší
+    info: |
+      <h2>Starší</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Nechme je. Mají prach jak trpaslíci, a stejně tak jejich čest. Až o jedno z toho přijdou, svět se stane horším.”</span>
+      <span class="zdroj">odůvodnění Kazmera I. pro nepodrobení si Doliny dolů</span></p>
+      <p>Po Zlomu začal trpasličí lid chřadnout, a nakonec vymírat. Důvodem byl nejspíš fakt, že trpaslíci byli stvořeni svým bohem a velmi se mu podobali. Když zemřel on, zemřelo i něco z nich. Během Ztraceného století mnoho lidí našlo útočiště v trpasličích a elfských ruinách. Někteří byli pozváni tím málem, co ještě žilo. Jiní našli domovy trpaslíků prázdné. Podobné příběhy platí i pro elfy. I když jejich ruiny nenabízely tolik ochrany, někteří lidé to viděli jako lepší možnost a opustili pro ně své domovy. Starší jsou zpravidla potomci těchto uprchlíků.</p>
+      <h4>Souznění Starších</h4>
+      <p>Starší chovají své mýtické zachránce v posvátné úctě. Žijí k jejich obrazu. “Trpaslíci” povětšinou zůstali v hor-ských a podhorských síních, často s tak dobrým umístěním a s takovým bohatstvím, že se později stali místní šlechtou a dnes prosperují. “Elfové” však téměř všechny své ruiny nakonec opustili, a vyrazili do světa jako kočovníci, obchodníci s artefakty a historií, šířící příběhy starých časů, písně, jejichž význam už dávno neznají. Často se jejich karavany zdržují před trpasličími síněmi, kde ví, že jsou vítány. Ačkoli se trpaslíci a elfové starých časů v lásce neměli, jejich následníci pro sebe dokážou najít někdy i hluboké pochopení. Některým kočovníkům je po malých dílech prodáván trpasličí prach, což je výsada, které se nedostává ani Císaři.</p>
+      <h4>Páni prachu</h4>
+      <p>Staršíc po trpaslících zdědili vynález střelného prachu. Jsou jediní, co znají jeho recept. Mají děla, píšťaly, někdy i komplikované ruční zbraně schopné vystřelit více kulek najednou. Tajemství střelného prachu dělá z následníků trpaslíků neustálou hrozbu všem sousedním vládcům. Nikdo se s Staršími nechce pustit do války. Mohl by okamžitě přijít o svou armádu i o hrad. Dokonce i císař Kazmer udělal vyjímku při dobývání jihu, když se zcela vyhnul konfliktu s Dolinou dolů. Kočovní Starší mají přístup jen k málo prachu, většinou ho používají pro ohňostroje. Jediný, kdo zná podobnou substanci jako je trpasličí prach jsou Lavrové. Ale rudá sůl Lavrů je mnohem výbušnější, a často ničí zbraně stejně jako nepřítele. Zvláště protože Lavrové neovládají pokročilou metalurgii. To Starší to s kovy umí, i to zdědili po trpaslících. Říká se, že kdyby se dostali k rudé soli oni, byli by schopni její potenciál využít naplno a mohli by na Pevnině rozpoutat peklo.</p>
+      <h4>Strážci nechtěných tradic</h4>
+      <p>Starší jsou jediní, kteří udržují naživu ztracené kultury. To u trpaslíků nikomu nijak zvlášť nevadí. Najde se ale hodně lidí, co se na kočovné Starší, zpívající elfské písně, dívá skrze prsty. A dopadá to i hůře. Nezřídka jsou kočovníci napadáni nebo musí utíkat před falešnými obviněními. Ať se stane jakékoliv neštěstí, krádež, vražda nebo epidemie moru, vždy za to můžou ti prokletí uctívači alpů, co možná dokonce schovávají pravého krvežíznivého alpa v jednom ze svých vozů. To se vlastně povídá i o trpaslících. Nějací přeci musí stále žít a skrývat se v citadelách Starších.</p>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +2 Int</li>
+        <li><strong>Vzdělán příběhy:</strong> Proficienti v jednom z Int/Wis skillu</li>
+        <li><strong>Kulturní výměna:</strong> Umíš třemi jakýmikoli jazyky.</li>
+      </ul>
+    sub_names:
+      - Ruiny
+      - Svět
+    subcultures:
+      - <br>
+          <ul>
+            <li><strong>Zvýšení vlastností:</strong> +1 Str, +1 Dex</li>
+            <li><strong>Zbroje starších lidů:</strong> Proficienti v Lehké a ve Střední zbroji, zároveň nemůže být zatížen zbrojí.</li>
+            <li><strong>Umění:</strong> Proficienti v Kovářství, v Sklářství nebo v Klenotnictví.</li>
+          </ul>
+      - <br>
+          <ul>
+            <li><strong>Zvýšení vlastností:</strong> +2 Cha</li>
+            <li><strong>Všudybyl:</strong> Proficienti v jednom jakémkoli skillu</li>
+            <li><strong>Kejklíř:</strong> Proficienti v Hudebním nástroji, ve Zlodějských nástrojích, v Padělání, nebo v Přestrojování</li>
+          </ul>
+    perks:
+      - název: Umělec
+        popis: Expertýza v jednom uměleckém nástroji. Pokud již nemáš, tak jen proficienti v jednom uměleckém nástroji.
+      - název: Performer
+        popis: Proficienti v Sleight of hands skillu, nebo proficienti v Performance skillu.
+      - název: Trubadur
+        popis: Proficienti v jakémkoli hudebním nástroji.
+      - název: Jazyky starších lidů
+        popis: Umí mluvit a psát Elfštinou, nebo Trpasličtinou, nebo oběma (v tom případě jde o dva perky).
+      - název: Ohňostroje
+        popis: Pyrotechnics spell (není spell, k seslání potřebuje střelný prach, případně rudou sůl).
+      - název: Staré triky
+        popis: Mending nebo Prestidigitation cantrip.
+      - název: Zbraně trpaslíků
+        popis: Proficienti v Sekerách a Kladivech.
+      - název: Zbraně elfů
+        popis: Proficienti v Mečích a Lucích.
+      - název: Střelné zbraně
+        popis: Proficienti ve Střelných zbraních.
+      - název: Znalosti Starého světa
+        popis: Výhoda na hody na Inteligence checky týkající se elfů a trpaslíků, či jiných starých ras.
+      - název: Uzavřená komunita
+        popis: Nevýhoda na Insight checky proti jedincům mimo komunitu starších.
+    prupovidka1: <p>Jako Starší máš následující atributy:</p>
+    prupovidka2: <p>Starší se nedělí na trpaslíky a elfy, ale na ty, co zůstali v jejich ruinách a často z nich vládnou, a na ty, kteří žijí kočovnickým životem všude po světě.</p>
+    prupovidka3: <p>Pokud jsi přišel do styku se Staršími, ať už z citadel, nebo s kočovníky, či se jinak setkal s kulturami starých ras, můžeš mít jakýkoli počet následujících perků.</p>
+---
+- vran_dict:
+    name: Vran
+    info: |
+      <h2>Vran</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Žene se z plání chladných vichrů van, a mnoho mrtvých, mnoho vran.”</span>
+      <span class="zdroj">severská říkanka</span></p>
+      <p>Kmen Mnoha vran přežívá v nehostinných podmínkách sněžných plání, ze kterých není úniku než přes hory střežené vojsky císařství nebo ledovce a zamrzlá moře. Vranové přežívají. Vranové umírají. A jdou dál. Vrana nic nezastaví. Ani smrt.</p>
+      <h4>Život v Pláních ledu</h4>
+      <p>Každý vran je silný bojovník schopný samostatně přežít nejhorší zimy ledových plání, boje s šavlozubými tygry a¨vším, co číhá za clonou sněhu. Vran který nepřežije ukrutnost plání – umrzne, nebo se o sebe nedokáže postarat sám, využít zdroje přírody do poslední kapky – není ostatními považován za Vrana. Žádný dospělý Vran na sobě nemá kus oblečení, který sám nevytvořil, nebo alespoň neulovil zvíře, ze kterého je ten kus pověst. Všude po světě se vypráví o vranských přechodech přes severní ledovce do samého srdce Císařství, a o jejich zběsilém boji a‘podivných šamanech.</p>
+      <h4>Vpád Mnoha vran</h4>
+      <p>Kmenů Vranů je nejspíše více, ani není jisté, jestli je to jméno, které pro sebe sami používají, nebo jen jméno pro příslušníky jednoho kmene. Kmen Mnoha Vran je totiž zdaleka nejproslulejším kmenem Vranů. Seveřani věděli, že kmeny Vranů žijí na Ledových pláních na východ od Tajanska. Během jedné zimy Ztraceného století se ale kmen Mnoha vran prostě objevil v samém srdci budoucího Císařství. Jediné možné vysvětlení bylo, že přešlí po severních ledovních. To by byla cesta dlouhá tisíc mil po Pláních ledu a tisíc dalších po severním ledovci. Tato cesta je měla zabít. A oni nejen žili, ale byli schopní bojovat a rabovat severské vesnice. Nakonec neměli úspěch. Seveřané je po dlouhé válce vyhnali zpátky do ledovce. Tam Mnoho vran znovu měla čekat smrt. O pár let později se kmen opět zjevil na Pláních. Díky této události, které se na severu říká Vpád Mnoha vran, dostali Vranové také nové výstižné jméno. Jednoduše se jim říká mrtví. Ale oni mrtví nejsou.</p>
+      <h4>Rávenské knížectví</h4>
+      <p>Vranské výpady se od té doby udály ještě dvakrát. Pokaždé byly úspěšně odvráceny. Kazmer na cestě zpátky na sever uštědřil Vranům tvrdou ránu a na dlouho je uklidnil. Když současný císař Traen nastoupil na trůn, Vranové byli největším ohrožením Císařství. Východní hranice docela padla pod jejich útokem. Traen vranský problém vyřešil nekonvenčně. Vranům, kteří už žili na území Císařství, tohle území prostě dal. Vzniklo tak Rávensko, knížectví, které je císařským leníkem. Kníže Aladar Raven, náčelník největšho usídleného kmenu, se stal císařovou pravou rukou a cenným generálem, ale hlavně úžasným ochráncem východní hranice císařství. Narazit na Vrana v Císařství nebo i v Katastrofě je tak dnes jedndušší než kdy dřív. Další kmeny, a hlavně ten Mnoha vran, je ale stále na Pláních ledu, a kdykoli se může znova objevit jako hrozba.</p>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +2 Str</li>
+        <li><strong>Vraní jazyk:</strong> Vran umí mluvit svým Vraním jazykem.</li>
+        <li><strong>Zbraně Vran:</strong> Proficienti ve Velkých zbraních (Velké sekery, kyje, meče).</li>
+        <li><strong>Háv vlastního lovu a výroby:</strong> Proficienti v Tkadleckých, Koželužských nebo ve Švecovských nástrojích.</li>
+        <li><strong>Vrh sekerou:</strong> Na 30 ft umíš vrhnout jakoukoli zbraň.</li>
+      </ul>
+    sub_names:
+      - Život
+      - Závoj
+      - Smrt
+    subcultures:
+      - <br>
+          <ul>
+            <li><strong>Zvýšení vlastností:</strong> +1 Con</li>
+            <li><strong>Vranská zdatnost:</strong> Proficienti v Athletics skillu.</li>
+            <li><strong>Nazastavitelnost:</strong> Jednou za Long rest, pokud máš padnout na 0 životů, zůstaneš místo toho na 1 životě.</li>
+          </ul>
+      - <br>
+          <ul>
+            <li><strong>Zvýšení vlastností:</strong> +1 do jakékoli vlastnosti</li>
+            <li><strong>Ne smrti:</strong> Spare the Dying cantrip a Gentle repose spell jednou za Long rest. (I jako Rituál)</li>
+            <li><strong>Třetí oko:</strong> Darkvision na 30ft.</li>
+          </ul>
+      - <br>
+          <ul>
+            <li><strong>Nebýt živ:</strong> Jsi Člověk, ale i Nemrtvý. Nepotřebuješ dýchat. Nemůžeš onemocnět. Nemusíš jíst. Nemusíš spát. Tvůj Short rest trvá 4 hodiny, Long rest jen den.</li>
+            <li><strong>Za závojem:</strong> Při neúspěchu na Death saving throw, nedostáváš Death fail. (Memento mori - Pořád získáš Death fail dorážením, či užitím Boromir death rule)</li>
+          </ul>
+    perks:
+      - název: Vraní zrak
+        popis: Výhoda na Perception checky týkající se zraku.
+      - název: Morbidní zvídavost
+        popis: Profišnci v Religion skillu.
+      - název: Jazyk Plání ledu
+        popis: Umíš mluvit a psát Orkštinou.
+      - název: Vrh sekerou
+        popis: Na 30 ft umíš vrhnout jakoukoli zbraň.
+      - název: Tvrdost plání
+        popis: Základní AC je 13 + Con.
+      - název: Vše vlastního lovu a výroby
+        popis: Profišnci v Tkadleckých, Koželužských a ve Ševcovských nástrojích.
+      - název: Co je mrtvé...
+        popis: Odolnost na nekrotické poškození.
+      - název: Co nekrvácí...
+        popis: Nemusíš dýchat. Odolnost na jed.
+      - název: Co je zmrzlé...
+        popis: Odolnost na poškození mrazem.
+      - název: ...může zemřít
+        popis: Zranitelnost na zářný poškození.
+    prupovidka1: <p>Jako Vran máš následující atributy:</p>
+    prupovidka2: <p>Ať už je důvod jakýkoli Vrana není jednoduché zabít. Říká se, že každý kmen má krom náčelníka nebo sněmu, který kmen vede, také šamana, jehož moc sahá za závoj smrti. Vranská kultura je smrtí protkaná.</p>
+    prupovidka3: <p>Pokud jsi žil v Rávensku, nebo ses snad procházel po Pláních, pak můžeš mít jakýkoli počet následujících perků.</p>
+---
+- lostorvan_dict:
+    name: Lostorvan
+    info: |
+      <h2>Lostorvan</h2>
+      <p style="text-align: center;margin-top: -6pt; left: 10%;right: 10%;"><span class="citat">“Je v zájmu nás všech, seveřanů i katastrofanů a vůbec celé Pevniny chránit svůj lid před tímto poloostrovem nepochopitelného zla. Lostorv je jako peklo. Jen je blíž.”</span>
+      <span class="zdroj">Parcival I. vyjednávající ustanovení Čaroskolu</span></p>
+      <p>Během Zlomu a během následujícího střetu bohů došlo k téměř úplnému oddělení části kontinentu od pevniny. Naštěstí. Ať už to bylo cokoli, něco se v hlubokých lesích za novým Tenkým mořem na onom novém poloostrově probudilo. Všemožné stvůry vyběhly vstříc světu, stromy se začaly stěhovat a ničily vše, co jim stálo v cestě. Les byl poražen až o mnoho desítek let později severem sjednoceným pod Krevelskou vlajkou. Proč tam někdo vůbec žije? Jsou to vyhnanci, ztroskotaní námořníci, potomci původních obyvatel poloostrova uvězněni lesem. A jediná věc těžší než v lese přežít je jej opustit.</p>
+      <h4>Prokletí Lesa</h4>
+      <p>Les lidi ven nepouští. Lostorvané jsou tvrdí lidé zvyklí bojovat se vším kolem sebe a poznat jakákoliv nebezpečí přírody. Lostorvané nemají vlastní jazyk. Většinou mluví jazykem země, ze které přišli oni nebo jejich předci. Lostorv své obyvatele mění, Lostorvané se pohybují podivně neplynule a jejich podoba - kůže, vlasy, oči - dostává podivných změn. Lostorvané mají zvláštní nadání vidět do jisté míry i v naprosté tmě, místo spánku nabírají sílu v podivném krátkém transu, ze kterého se mohou každou chvíli vědomě probudit. Všichni z nich od narození vládnou magií. Vliv Lesa sahá daleko. I lidé, kteří žijí míle daleko, jim mohou být poznamenaní.</p>
+      <h4>Únik a Čarobrana</h4>
+      <p>Jediné osídlení v lese, o kterém se ví je Únik na západním cípu poloostrova. Potomco Kazmer porazil jiženské rytíře, dal jim na výběr smrt, nebo život v Lostorvu. Pokud se kdy dostanou ven, budou zproštěni všech vin. Mnoho přijalo a odplulo tam s rodinami. Nikdo neunikl. Ironicky pojmenovaný Únik se tak stal místem vyhnanství. Nejen obyvatelé lesa se však dají pokládat za Lostorvany. Narození blízko polotrova, bránijští námořníci obchodující s Únikem, a zvláště Čarobránci Čaroskolu, co mají před lesem chránit Pevninu neodolávají vlivu Lesa a mohou se stát podobným Lostorvanovi, nebo jednoho přivést na svět. Čarobrana je Úniku v něčem podobná. Jako vyhnanci do Úniku, se do Čaroskolu posílají zločinci. Ať už spáchali cokoli, po dvanácti letech služby dostávají svobodu.</p>
+    stats: |
+      <ul>
+        <li><strong>Zvýšení vlastností:</strong> +2 Con</li>
+        <li><strong>Ostřím proti Lesu:</strong> Proficienti v jednom z šavlí, válečných sekera nebo velkých seker.</li>
+        <li><strong>Znalost Lesa:</strong> Proficienti v Nature nebo Survival skillu.</li>
+        <li><strong>Strnulost:</strong> Rychlost je 25 ft.</li>
+        <li><strong>Zrak Lesa:</strong> Darkvision na 60 ft.</li>
+        <li><strong>Vězni odevšad:</strong> Znají dva jazyky.</li>
+        <li><strong>Tranz:</strong> Nemusí spát, ale odpočívají v tranzu, který trvá 4 hodiny pro Short rest a 1 den pro Long rest.</li>
+      </ul>
+    sub_names:
+      - Slza
+      - Pláč
+    subcultures:
+      - <br>
+        <ul>
+          <li><strong>Zvýšení vlastností:</strong> + 1 Wis</li>
+          <li><strong>Tvrdost:</strong> Za každý level dostává 1 život navíc.</li>
+          <li><strong>Slza magie</strong> Jeden jakýkoli cantrip. Vlastnost, přes kterou se počítá bonus na útok a DC je Wisdom.</li>
+        </ul>
+      - |
+        <br>
+        <ul>
+          <li><strong>Zvýšení vlastností:</strong> +1 do jakékoli vlastnosti</li>
+          <li><strong>Křehkost:</strong> Zranitelnost psychickému poškození.</li>
+          <li><strong>Pláč magie:</strong> Traumathurgy cantrip a také kouzla z jednoho řádku z následující tabulky. První kouzlo se dostává na levelu jedna, druhé na levelu tři. Tato kouzla lze použít jen jednou za Long rest.</li>
+        </ul>
+        <table style="text-align: center; font-size: 90%;margin-bottom:15pt">
+          <tr>
+            <th></th>
+            <th>Level 1</th>
+            <th>Level 3</th>
+          </tr>
+          <tr>
+            <td style="font-style: italic;">Sen</td>
+            <td>Sleep</td>
+            <td>Silence</td>
+          </tr>
+          <tr>
+            <td style="font-style: italic;">Oheň</td>
+            <td>Continual flame</td>
+            <td>Flame blade</td>
+          </tr>
+          <tr>
+            <td style="font-style: italic;">Mlha</td>
+            <td>Fog cloud</td>
+            <td>Misty step</td>
+          </tr>
+          <tr>
+            <td style="font-style: italic;">List</td>
+            <td>Pass without trace</td>
+            <td>Barkskin</td>
+          </tr>
+        </table>
+    perks:
+      - název: Živen sluncem
+        popis: Nemusí jíst, pokud je dostatečně dlouho na slunci.
+      - název: Jedním s Lesem
+        popis: Nejsou humanoidi, ale Diven.
+      - název: Krev navyklá jedu
+        popis: Odolnost na poškození jedem a výhoda na hody proti otrávení.
+      - název: Podivný vzhled
+        popis: Výhoda na první Intimidation check proti bytostem nezkušeným s magií a netvory.
+      - název: Vědění
+        popis: Profišnci v Nature nebo Herbalism kitu.
+      - název: Zrak temnoty
+        popis: Blindsight na 30ft nebo na 60ft s omezením zraku.
+      - název: Zrak lesa
+        popis: Darkvision na 60ft.
+      - název: Jazyk lesa
+        popis: Umí mluvit Sylvanštinou.
+      - název: Větší srtnulost
+        popis: Rychlost 20ft.
+      - název: Ostrý sluch v ticha Lesa
+        popis: Výhoda na Perception checky týkající se sluchu a zranitelnost hromovým poškozením
+    prupovidka1: <p>Jako Lostorvan máš následující atributy:</p>
+    prupovidka2: <p>Všem Lostoranům dává Les magické schopnosti. Naprostá většina vládne jen slzou magie. Někteří jedinci jsou však mocnější. Takoví jsou vždy duševně nevyrovna-ní. A často magicky nebezpeční. V tom velmi se podobají Budanům, a tak se k nim často chovají i jiní Lostorvané. Ač mají velkou moc, jejich příběhy končívají pláčem.</p>
+    prupovidka3: <p>Pokud jsi přišel do kontaktu s Lesem Lostorvu, ať už bydlel jsi na pobřeží naproti Lesu, nebo i dál, nebo ho jen uviděl zdálky, nebo snad zavítal přímo dovnitř, či se narodil Lostorvanovi, či možná jen Lostorvana potkal, pak můžeš mít jakýkoli počet následujících perků:</p>

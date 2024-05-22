@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ennerakt</title>
+    <link rel="stylesheet" href="static/styles/style.css">
+
+    <style>
+        .frame-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            flex-direction: column; /* Změněno na sloupcové uspořádání */
+            align-items: center;
+            border: 5px solid black;
+            overflow: hidden;
+        }
+
+        .map-container {
+            width: 800px;
+            height: 550px;
+            overflow: hidden;
+            position: relative;
+            background: white;
+        }
+
+        .map-container img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.5s ease;
+            transform-origin: 50% 50%; /* Centrování pro transformace */
+        }
+
+        .map-container.zoomed img {
+            transform: scale(3);
+        }
+
+        button.zoom-button {
+            padding: 10px 20px;
+            margin-top: 20px; /* Umístění tlačítka pod mapou */
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="frame-container">
+        <div class="map-container default">
+            <img id="map" src="static/images/Mapa 481 (bez politiky).png" alt="Mapa">
+        </div>
+    </div>
+
+    <button class="zoom-button" id="zoom-btn">Zoom</button>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const map = document.getElementById('map');
+            const zoomBtn = document.getElementById('zoom-btn');
+            const container = map.parentNode; // Získává rodičovský kontejner mapy pro výpočty hranic
+            let isZoomed = false;
+            let lastX = 0, lastY = 0, mapX = 0, mapY = 0;
+    
+            zoomBtn.addEventListener('click', function() {
+                isZoomed = !isZoomed;
+                container.classList.toggle('zoomed');
+                this.textContent = isZoomed ? 'Unzoom' : 'Zoom';
+                if (!isZoomed) {
+                    // Resetuje pozici a transformaci při odzoomování
+                    map.style.transform = "translate(0px, 0px) scale(1)";
+                    mapX = 0;
+                    mapY = 0;
+                }
+            });
+    
+            map.addEventListener('mousedown', function(e) {
+                if (isZoomed) {
+                    lastX = e.clientX;
+                    lastY = e.clientY;
+                    map.style.cursor = 'grabbing';
+                    e.preventDefault(); // Zabraňuje standardnímu chování prohlížeče
+                }
+            });
+    
+            window.addEventListener('mousemove', function(e) {
+                if (isZoomed && map.style.cursor === 'grabbing') {
+                    const deltaX = e.clientX - lastX;
+                    const deltaY = e.clientY - lastY;
+    
+                    // Vypočítá nové pozice s přihlédnutím k limitům
+                    let newX = mapX + deltaX;
+                    let newY = mapY + deltaY;
+    
+                    // Vypočítá maximální povolené posuny
+                    const maxMoveX = container.clientWidth - map.clientWidth * 3; // Zvětšená šířka mapy
+                    const maxMoveY = container.clientHeight - map.clientHeight * 3; // Zvětšená výška mapy
+    
+                    // Omezuje pohyb, aby mapa nevyšla z rámečku
+                    mapX = Math.min(0, Math.max(maxMoveX, newX));
+                    mapY = Math.min(0, Math.max(maxMoveY, newY));
+    
+                    map.style.transform = `translate(${mapX}px, ${mapY}px) scale(3)`;
+                    lastX = e.clientX;
+                    lastY = e.clientY;
+                }
+            });
+    
+            window.addEventListener('mouseup', function() {
+                map.style.cursor = 'grab'; // Vrací kurzor zpět
+            });
+        });
+    </script>
+    
+</body>
+</html>

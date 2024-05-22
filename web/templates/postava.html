@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="../static/styles/style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+{% extends 'kult_sablona.html' %}
+{% if
+    session['title1'] != 'Tvoje postava' or
+    session['title2'] != '...' or
+    session['title3'] != '...' or
+    session['title4'] != '...' or
+    session['title5'] != '...' or
+    session['title6'] != '...'  %}
+    {% set content_changed = True %}
+{% else %}
+    {% set content_changed = False %}
+{% endif %}
+
+{% block sloupec_1 %} 
+    {% if kosik['xperku']|length != 0 or kosik['kultura'] != '' or kosik['podkultura'] != '' or content_changed %}
+
+    {% else %}
+    <p>
+        U jednotlivých kultur si můžeš zaškrtnout políčka,
+        a tím sem dostat atributy jedné kultury, podkultury a jakékoli kulturní perky.
+        Pak si to můžeš vytisknout a mít to všechno pohromadě!
+    </p>
+    {% endif %}
+
+    <h2 id="title1"  contenteditable="true" data-key="title1">Tvá postava</h2>
+        {{ kosik['kultura'] | safe }}
+        {{ kosik['podkultura'] | safe }}
+
+        {% if kosik['xperku']|length != 0 %}
+            <h4>Kulturní perky:</h4>
+        {% endif %}
+    <br>
+        <ul>
+            {% for perk in kosik['xperku'] %}
+                {% set parts = perk.split(':') %}
+                {% set nazev = parts[0] %}
+                {% set popis = parts[1] %}
+                <li><strong>{{ nazev }}</strong>: {{ popis }}</li>
+            {% endfor %}
+        </ul>
+
+    {% if kosik['xperku']|length != 0 or kosik['kultura'] != '' or kosik['podkultura'] != '' or content_changed %}
+
+    {% else %}
+    <p>Vyber si kulturu a podkulturu a kolik chceš kulturních perků. Podkultura musí patřit pod vybranou kulturu. Kulturní perky ale samozřejmě ne! Jen si jich nevyber moc. Doporučuju 2 nebo 3. Ve více se pak bude těžko vyznávat.</p>
+    {% endif %}
+
+    {% if kosik['xperku']|length >= 5 %}
+    <p>To je nějak hodně perků ne? :(</p>
+    {% endif %}
+
+
+{% endblock %}
+
+{% block sloupec_2 %}
+    <h2></h2>
+    <p class="editable-section" style="margin-top: 70px;">
+        <strong class="editable-label">Klasa:</strong>
+        <span id="title2" class="editable-content" contenteditable="true" data-key="title2">...</span>
+    </p>
+
+
+    <p class="editable-section">
+        <strong class="editable-label">Podklasa:</strong>
+        <span id="title3" class="editable-content" contenteditable="true" data-key="title3">...</span>
+    </p>
+
+    <p class="editable-section">
+        <strong class="editable-label">Koncept:</strong>
+        <span id="title6" class="editable-content" contenteditable="true" data-key="title6">...</span>
+    </p>
+
+    <p class="editable-section" style="display: block !important">
+        <strong class="editable-label" style="display: block;">Backstory:</strong>
+        <span id="title4" class="editable-content" contenteditable="true" data-key="title4">...</span>
+    </p>
+
+    <p class="editable-section" style="display: block !important">
+        <strong class="editable-label" style="display: block;">Poznámky:</strong>
+        <span id="title5" class="editable-content" contenteditable="true" data-key="title5">...</span>
+    </p>
+
+
+    <div class="buttons">
+    {% if kosik['xperku']|length != 0 or kosik['kultura'] != '' or kosik['podkultura'] != '' or content_changed %}
+    <form action="/smaz" method="POST">
+        <div style="display: flex; margin-top: 80pt;">
+            <h5>Smazat vše</h5>
+            <button type="submit" name="smazButton" style="height: 10%; margin-left: 10pt; margin-top: 2pt;">►</button>
+        </div>
+    </form>
+    {% endif %}
+    {% if kosik['xperku']|length != 0 %}
+    <form action="/smazperky" method="POST">
+        <div style="display: flex; margin-top: 0pt;">
+            <h5>Smazat perky</h5>
+            <button type="submit" style="height: 10%; margin-left: 10pt; margin-top: 2pt;">►</button>
+        </div>
+    </form>
+    {% endif %}
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const editableTitles = document.querySelectorAll('[contenteditable="true"]');
+
+            editableTitles.forEach(element => {
+                const key = element.getAttribute('data-key');
+
+                // Fetch and set initial content from session
+                fetch(`/get-title?key=${key}`)
+                    .then(response => response.text())
+                    .then(data => {
+                        if (data) element.textContent = data;
+                    });
+
+                element.addEventListener('input', function() {
+                    const content = element.textContent;
+                    console.log(`Saving ${key}: ${content}`); // Log what is being sent
+
+                    fetch('/save-title', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ key: key, title: content })
+                    }).then(response => response.json())
+                      .then(data => console.log('Saved:', data))
+                      .catch(error => console.error('Error:', error));
+                });
+            });
+
+            const resetButton = document.getElementById('smazButton');
+            resetButton.addEventListener('click', function() {
+                fetch('/smaz', { method: 'POST' })
+                    .then(() => {
+                        // Assuming you are redirected to the updated page automatically
+                        // If not, fetch new placeholder data like this:
+                        updatePlaceholders();
+                    });
+            });
+
+            });
+
+            function updatePlaceholders() {
+                const editableTitles = document.querySelectorAll('[contenteditable="true"]');
+                editableTitles.forEach(element => {
+                    const key = element.getAttribute('data-key');
+                    fetch(`/get-title?key=${key}`)
+                        .then(response => response.text())
+                        .then(data => {
+                            element.textContent = data;  // Update with new placeholder or reset text
+                        });
+                });
+            }
+
+                document.addEventListener('DOMContentLoaded', function() {
+                const editableElements = document.querySelectorAll('.editable-content');
+
+                editableElements.forEach(element => {
+                    element.addEventListener('focus', function() {
+                        if (this.textContent.trim() === '...' || this.textContent.trim() === 'Tvoje postava') {
+                            selectText(this);
+                        }
+                    });
+                });
+                });
+
+                function selectText(element) {
+                    if (document.body.createTextRange) { // for Internet Explorer
+                        const range = document.body.createTextRange();
+                        range.moveToElementText(element);
+                        range.select();
+                    } else if (window.getSelection) { // Other browsers
+                        const selection = window.getSelection();
+                        const range = document.createRange();
+                        range.selectNodeContents(element);
+                        selection.removeAllRanges();
+                        selection.addRange(range);
+                    }
+                }
+        </script>
+
+        <style>
+            .editable-section {
+                display: flex;
+                align-items: flex-start;
+                line-height: normal;
+            }
+
+            .editable-label {
+                margin-right: 10px;
+                width: 70px;
+            }
+
+            .editable-content {
+                display: inline-block;
+                min-width: 100px;
+                max-width: 300px;
+            }
+
+
+            .editable-content:focus {
+                border-color: blue;
+            }
+
+            /* Responsive adjustments */
+            @media (max-width: 1200px) {
+                .editable-content {
+                    max-width: 90%; /* Adjusts max width to 80% of its container */
+                }
+                .editable-section {
+                margin-top: 20px !important
+            }
+            }
+        </style>
+
+{% endblock %}
+
+
+
+
